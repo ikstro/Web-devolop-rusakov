@@ -6,8 +6,20 @@
 .btn[data-variant="primary"]:hover, .btn--primary:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(79,70,229,.4); }
 
 /* Secondary */
-.btn[data-variant="secondary"], .btn--secondary { color: var(--indigo-500); background: transparent; border: 2px solid #e5e7eb; }
-.btn[data-variant="secondary"]:hover, .btn--secondary:hover { background: rgba(79,70,229,.05); border-color: var(--indigo-500); }
+.btn[data-variant="secondary"], .btn--secondary { 
+  color: var(--indigo-500); 
+  background: transparent; 
+  border: 2px solid var(--indigo-500); 
+  font-size: 14px;
+  padding: 10px 20px;
+}
+.btn[data-variant="secondary"]:hover, .btn--secondary:hover { 
+  background: rgba(79,70,229,.05); 
+  border-color: var(--violet-500); 
+  color: var(--violet-500);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(79,70,229,.15);
+}
 
 
 
