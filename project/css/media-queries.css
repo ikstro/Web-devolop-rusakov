@@ -1,0 +1,15 @@
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .site-header .header__inner { height: 70px; }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .site-header .header__inner { height: 60px; }
+  .btn--lg { width: 100%; }
+}
+
+
+
+
+

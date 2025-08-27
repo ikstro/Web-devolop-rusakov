@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Профессиональная Web‑разработка — дизайн, код и автоматизация." />
+    <title>Профессиональная Web‑разработка</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/media-queries.css" />
+  </head>
+  <body>
+    <header class="site-header" id="top">
+      <div class="container header__inner">
+        <a class="logo" href="#top">WEB<span class="logo__accent">PRO</span></a>
+        <nav class="nav" aria-label="Навигация">
+          <a class="nav__link" href="#about">Об авторе</a>
+          <a class="nav__link" href="#features">Особенности</a>
+          <a class="nav__link" href="#program">Программа</a>
+          <a class="nav__link" href="#format">Формат</a>
+          <a class="nav__link" href="#bonuses">Бонусы</a>
+          <a class="nav__link" href="#order">Заказ</a>
+          <a class="nav__link" href="#faq">FAQ</a>
+        </nav>
+        <div class="header__actions">
+          <a class="btn btn--primary header-cta" href="#order">Оформить заказ</a>
+          <button class="burger" aria-label="Открыть меню" aria-controls="mobileMenu" aria-expanded="false"><span></span><span></span><span></span></button>
+        </div>
+      </div>
+      <nav class="mobile-menu" id="mobileMenu" aria-label="Мобильное меню">
+        <a class="mobile-menu__link" href="#about">Об авторе</a>
+        <a class="mobile-menu__link" href="#features">Особенности</a>
+        <a class="mobile-menu__link" href="#program">Программа</a>
+        <a class="mobile-menu__link" href="#format">Формат</a>
+        <a class="mobile-menu__link" href="#bonuses">Бонусы</a>
+        <a class="mobile-menu__link" href="#order">Заказ</a>
+        <a class="mobile-menu__link" href="#faq">FAQ</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero-section section-hero" id="hero">
+        <div class="container hero__grid">
+          <div class="hero__left">
+            <h1 class="hero-title">Станьте <span class="text-accent">Web‑разработчиком</span></h1>
+            <p class="hero-subtitle">HTML, CSS, JavaScript, PHP, Laravel, Docker, Git, CI/CD — в одном практическом курсе.</p>
+            <p class="hero-cta-text">Стартуйте сегодня — выгодно и без лишнего шума.</p>
+            <div class="hero-buttons">
+              <a href="#order" class="btn btn--primary btn--lg">Получить 50% скидку</a>
+              <a href="#program" class="btn btn--secondary btn--lg">Смотреть программу</a>
+            </div>
+            <div class="hero-stats">
+              <div class="stat-item"><span class="stat-number">30 000+</span><span class="stat-label">строк кода</span></div>
+              <div class="stat-item"><span class="stat-number">70</span><span class="stat-label">курсов</span></div>
+              <div class="stat-item"><span class="stat-number">750 000</span><span class="stat-label">учеников</span></div>
+            </div>
+          </div>
+          <div class="hero__right">
+            <div class="hero-video">
+              <div class="video-placeholder"><button class="play-button" aria-label="Воспроизвести">▶</button></div>
+            </div>
+            <div class="countdown-timer" data-target="">
+              <div class="timer-label">Скидка заканчивается</div>
+              <div class="timer-display">
+                <div class="timer-unit"><span class="timer-number" data-days>00</span><span class="timer-text">дней</span></div>
+                <div class="timer-unit"><span class="timer-number" data-hours>00</span><span class="timer-text">часов</span></div>
+                <div class="timer-unit"><span class="timer-number" data-minutes>00</span><span class="timer-text">минут</span></div>
+                <div class="timer-unit"><span class="timer-number" data-seconds>00</span><span class="timer-text">секунд</span></div>
+              </div>
+            </div>
+            <form class="hero-form" action="#" method="post" novalidate>
+              <div class="form-title">Получите 50% скидку</div>
+              <div class="form-fields">
+                <input class="form-input" type="text" name="name" placeholder="Имя" />
+                <input class="form-input" type="email" name="email" placeholder="E‑mail" />
+              </div>
+              <button class="form-submit" type="submit">Получить скидку</button>
+            </form>
+          </div>
+        </div>
+        <div class="decoration-1 hero-decoration"></div>
+        <div class="decoration-2 hero-decoration"></div>
+      </section>
+
+      <section class="section section-alt" id="features">
+        <div class="container">
+          <span class="overline">Особенности</span>
+          <h2 class="h2">Легкий, чистый, профессиональный</h2>
+          <div class="grid grid--cards">
+            <article class="card card-hover gradient-subtle"><h3 class="h4">Полный цикл</h3><p>Документация → дизайн → код → деплой.</p></article>
+            <article class="card card-hover gradient-subtle"><h3 class="h4">Практика</h3><p>Реальный проект и тесты.</p></article>
+            <article class="card card-hover gradient-subtle"><h3 class="h4">Цена</h3><p>В 10–15 раз дешевле онлайн‑школ.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="program">
+        <div class="container">
+          <span class="overline">Программа</span>
+          <h2 class="h2">7 модулей и 5 подмодулей</h2>
+          <div class="accordion" data-accordion>
+            <div class="accordion__item">
+              <button class="accordion__header" aria-expanded="false">Модуль 1. Введение</button>
+              <div class="accordion__panel"><p>Git, Docker, Agile, тесты, AI‑дизайн.</p></div>
+            </div>
+            <div class="accordion__item">
+              <button class="accordion__header" aria-expanded="false">Модуль 2. Документация</button>
+              <div class="accordion__panel"><p>Confluence, требования, архитектура.</p></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="order">
+        <div class="container">
+          <div class="cta cta--boxed">
+            <h2 class="h2">Скидка 50% — 14 770 ₽</h2>
+            <p class="subtitle">Итоговая цена курса: 29 700 ₽ → 14 770 ₽</p>
+            <a class="btn btn--primary btn--lg" href="#faq">Есть вопросы?</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-alt" id="faq">
+        <div class="container">
+          <span class="overline">FAQ</span>
+          <h2 class="h2">Вопросы и ответы</h2>
+          <div class="accordion" data-accordion>
+            <div class="accordion__item"><button class="accordion__header" aria-expanded="false">Какое разрешение у видео?</button><div class="accordion__panel"><p>2K (2560×1440)</p></div></div>
+            <div class="accordion__item"><button class="accordion__header" aria-expanded="false">Как оплатить?</button><div class="accordion__panel"><p>Популярные способы оплаты, детали в ТЗ.</p></div></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer section-dark">
+      <div class="container footer__inner">
+        <div class="footer__brand">WEBPRO</div>
+        <div class="footer__copy">© <span id="year"></span> Профессиональная Web‑разработка</div>
+      </div>
+    </footer>
+
+    <div class="action-bar action-bar-desktop" hidden>
+      <button class="action-button scroll-top-button" data-scroll-top aria-label="Наверх">↑</button>
+      <button class="action-button contact-button" aria-label="Контакты">✉</button>
+      <a href="#order" class="action-button main-cta-button" aria-label="Оформить заказ">★</a>
+    </div>
+    <div class="action-bar action-bar-mobile" hidden>
+      <div class="mobile-action-grid">
+        <div class="timer-widget" id="miniTimer">05:12:15</div>
+        <a href="#order" class="btn btn--primary">Оформить заказ</a>
+      </div>
+    </div>
+
+    <script type="module" src="js/main.js"></script>
+  </body>
+  </html>
+
+
+
+
+
