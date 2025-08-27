@@ -1,3 +1,7 @@
+@import url("./components/buttons.css");
+@import url("./components/card.css");
+@import url("./components/accordion.css");
+
 /* Design System — tokens */
 :root {
   --header-h: 72px;
@@ -103,7 +107,6 @@ h3, .h3 { font-size: var(--fs-h3); font-weight: 600; margin: 0 0 var(--space-3);
 .mobile-menu__link:hover { color: var(--indigo-500); }
 
 /* Buttons */
-@import url("./components/buttons.css");
 
 /* Hero */
 .section-hero { background: linear-gradient(135deg, var(--bg-hero-1) 0%, var(--bg-hero-2) 100%); }
@@ -129,7 +132,6 @@ h3, .h3 { font-size: var(--fs-h3); font-weight: 600; margin: 0 0 var(--space-3);
 .section-dark { background: linear-gradient(135deg, #1f2937, #111827); color: #fff; }
 
 /* Cards */
-@import url("./components/card.css");
 
 /* Countdown */
 .countdown-timer { background: #fff; border-radius: 20px; padding: 24px; box-shadow: 0 12px 40px rgba(0,0,0,.08); border: 1px solid rgba(79,70,229,.1); text-align: center; margin-bottom: 24px; }
@@ -149,7 +151,6 @@ h3, .h3 { font-size: var(--fs-h3); font-weight: 600; margin: 0 0 var(--space-3);
 .form-submit:hover { transform: translateY(-1px); box-shadow: 0 6px 16px rgba(16,185,129,.4); }
 
 /* Accordion */
-@import url("./components/accordion.css");
 
 /* CTA Box */
 .cta--boxed { background: linear-gradient(135deg, var(--bg-hero-1), var(--bg-hero-2)); border-radius: 24px; padding: 32px; box-shadow: var(--shadow-md); text-align: center; }
