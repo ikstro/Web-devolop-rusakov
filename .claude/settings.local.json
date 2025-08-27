@@ -2,9 +2,16 @@
   "permissions": {
     "allow": [
       "Bash(git add:*)",
-      "Bash(git commit:*)"
+      "Bash(git commit:*)",
+      "Bash(dir)",
+      "Bash(ls:*)",
+      "Bash(find:*)",
+      "Bash(echo $HOME)"
     ],
     "deny": [],
-    "ask": []
+    "ask": [],
+    "additionalDirectories": [
+      "E:\\c\\Users\\creoo"
+    ]
   }
 }

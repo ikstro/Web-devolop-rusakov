@@ -1,0 +1,12 @@
+.accordion__item { border-radius: 16px; background: #fff; box-shadow: var(--shadow-sm); border: 1px solid #eef2ff; overflow: hidden; }
+.accordion__item + .accordion__item { margin-top: 12px; }
+.accordion__header { width: 100%; text-align: left; padding: 16px 18px; font-weight: 600; color: var(--gray-800); background: #fff; border: 0; cursor: pointer; display: flex; align-items: center; justify-content: space-between; }
+.accordion__title { pointer-events: none; }
+.accordion__caret { display: inline-block; transition: transform .25s ease; margin-left: 12px; }
+.accordion__panel { display: grid; grid-template-rows: 0fr; transition: grid-template-rows .25s ease; }
+.accordion__panel > * { overflow: hidden; padding: 0 18px; }
+.accordion__item[data-open="true"] .accordion__panel { grid-template-rows: 1fr; padding-bottom: 12px; }
+.accordion__item[data-open="true"] .accordion__caret { transform: rotate(180deg); }
+
+
+

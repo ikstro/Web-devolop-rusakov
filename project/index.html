@@ -8,10 +8,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="css/main.css" />
-    <link rel="stylesheet" href="css/media-queries.css" />
+    <link rel="stylesheet" href="styles/proweb/main.css" />
+    <link rel="stylesheet" href="styles/proweb/media-queries.css" />
   </head>
-  <body>
+  <body data-variant="order">
     <header class="site-header" id="top">
       <div class="container header__inner">
         <a class="logo" href="#top">WEB<span class="logo__accent">PRO</span></a>
@@ -70,14 +70,16 @@
                 <div class="timer-unit"><span class="timer-number" data-seconds>00</span><span class="timer-text">секунд</span></div>
               </div>
             </div>
-            <form class="hero-form" action="#" method="post" novalidate>
-              <div class="form-title">Получите 50% скидку</div>
-              <div class="form-fields">
-                <input class="form-input" type="text" name="name" placeholder="Имя" />
-                <input class="form-input" type="email" name="email" placeholder="E‑mail" />
-              </div>
-              <button class="form-submit" type="submit">Получить скидку</button>
-            </form>
+            <div class="block--subscribe">
+              <form class="hero-form" action="#" method="post" novalidate>
+                <div class="form-title">Получите 50% скидку</div>
+                <div class="form-fields">
+                  <input class="form-input" type="text" name="name" placeholder="Имя" />
+                  <input class="form-input" type="email" name="email" placeholder="E‑mail" />
+                </div>
+                <button class="form-submit" type="submit">Получить скидку</button>
+              </form>
+            </div>
           </div>
         </div>
         <div class="decoration-1 hero-decoration"></div>
@@ -101,19 +103,19 @@
           <span class="overline">Программа</span>
           <h2 class="h2">7 модулей и 5 подмодулей</h2>
           <div class="accordion" data-accordion>
-            <div class="accordion__item">
-              <button class="accordion__header" aria-expanded="false">Модуль 1. Введение</button>
+            <div class="accordion__item" data-open="false">
+              <button class="accordion__header" aria-expanded="false"><span class="accordion__title">Модуль 1. Введение</span><span class="accordion__caret" aria-hidden="true">^</span></button>
               <div class="accordion__panel"><p>Git, Docker, Agile, тесты, AI‑дизайн.</p></div>
             </div>
-            <div class="accordion__item">
-              <button class="accordion__header" aria-expanded="false">Модуль 2. Документация</button>
+            <div class="accordion__item" data-open="false">
+              <button class="accordion__header" aria-expanded="false"><span class="accordion__title">Модуль 2. Документация</span><span class="accordion__caret" aria-hidden="true">^</span></button>
               <div class="accordion__panel"><p>Confluence, требования, архитектура.</p></div>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="section" id="order">
+      <section class="section block--order" id="order">
         <div class="container">
           <div class="cta cta--boxed">
             <h2 class="h2">Скидка 50% — 14 770 ₽</h2>
@@ -128,8 +130,8 @@
           <span class="overline">FAQ</span>
           <h2 class="h2">Вопросы и ответы</h2>
           <div class="accordion" data-accordion>
-            <div class="accordion__item"><button class="accordion__header" aria-expanded="false">Какое разрешение у видео?</button><div class="accordion__panel"><p>2K (2560×1440)</p></div></div>
-            <div class="accordion__item"><button class="accordion__header" aria-expanded="false">Как оплатить?</button><div class="accordion__panel"><p>Популярные способы оплаты, детали в ТЗ.</p></div></div>
+            <div class="accordion__item" data-open="false"><button class="accordion__header" aria-expanded="false"><span class="accordion__title">Какое разрешение у видео?</span><span class="accordion__caret" aria-hidden="true">^</span></button><div class="accordion__panel"><p>2K (2560×1440)</p></div></div>
+            <div class="accordion__item" data-open="false"><button class="accordion__header" aria-expanded="false"><span class="accordion__title">Как оплатить?</span><span class="accordion__caret" aria-hidden="true">^</span></button><div class="accordion__panel"><p>Популярные способы оплаты, детали в ТЗ.</p></div></div>
           </div>
         </div>
       </section>
@@ -154,7 +156,7 @@
       </div>
     </div>
 
-    <script type="module" src="js/main.js"></script>
+    <script type="module" src="js/proweb.min.js"></script>
   </body>
   </html>
 

@@ -1,0 +1,18 @@
+.grid { display: grid; gap: 24px; }
+.grid--cards { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+
+.card { background: #fff; border-radius: 20px; padding: 24px; box-shadow: var(--shadow-md); border: 1px solid rgba(79,70,229,.06); }
+.card-hover { transition: all .25s ease; }
+.card-hover:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
+.gradient-subtle, .card[data-tone="subtle"] { background: linear-gradient(135deg, rgba(79,70,229,.02), rgba(124,58,237,.02)); }
+.card[data-tone="solid"] { background: #fff; }
+.card[data-elevation="lg"] { box-shadow: 0 8px 24px rgba(0,0,0,.12); }
+
+.card--bonus .badge { background: rgba(79,70,229,.1); color: var(--indigo-500); }
+.card--module .badge { background: rgba(16,185,129,.1); color: var(--green-500); }
+
+.badge { display: inline-block; padding: 6px 10px; border-radius: 999px; font-weight: 600; font-size: 12px; }
+.badge[data-tone="indigo"]{ background: rgba(79,70,229,.1); color: var(--indigo-500); }
+
+
+

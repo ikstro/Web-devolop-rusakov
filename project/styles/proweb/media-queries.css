@@ -5,11 +5,9 @@
 
 /* Mobile */
 @media (max-width: 767px) {
-  .site-header .header__inner { height: 60px; }
+  :root { --header-h: 60px; }
   .btn--lg { width: 100%; }
 }
-
-
 
 
 
