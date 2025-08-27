@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="styles/proweb/main.css" />
     <link rel="stylesheet" href="styles/proweb/media-queries.css" />
   </head>
-  <body data-variant="order">
+  <body data-variant="subscribe">
     <header class="site-header" id="top">
       <div class="container header__inner">
         <a class="logo" href="#top">WEB<span class="logo__accent">PRO</span></a>
@@ -44,40 +44,34 @@
       <section class="hero-section section-hero" id="hero">
         <div class="container hero__grid">
           <div class="hero__left">
-            <h1 class="hero-title">Станьте <span class="text-accent">Web‑разработчиком</span></h1>
-            <p class="hero-subtitle">HTML, CSS, JavaScript, PHP, Laravel, Docker, Git, CI/CD — в одном практическом курсе.</p>
-            <p class="hero-cta-text">Стартуйте сегодня — выгодно и без лишнего шума.</p>
-            <div class="hero-buttons">
-              <a href="#order" class="btn btn--primary btn--lg">Получить 50% скидку</a>
-              <a href="#program" class="btn btn--secondary btn--lg">Смотреть программу</a>
-            </div>
-            <div class="hero-stats">
-              <div class="stat-item"><span class="stat-number">30 000+</span><span class="stat-label">строк кода</span></div>
-              <div class="stat-item"><span class="stat-number">70</span><span class="stat-label">курсов</span></div>
-              <div class="stat-item"><span class="stat-number">750 000</span><span class="stat-label">учеников</span></div>
-            </div>
+            <h1 class="hero-title">Хотите стать профессиональным <span class="text-accent">Web-разработчиком</span> и создавать современные Web-приложения с нуля за XXX часов?</h1>
+            <p class="hero-subtitle">Хотите изучить весь необходимый стек и набор инструментов для Web-разработчика: HTML, CSS, SCSS, JavaScript, PHP, SQL, Laravel, Nginx, PostCSS, npm, Vite, Vitest, Composer, PHPUnit, Prettier, Stylelint, ESLint, Pint, Larastan, Git, Agile, Scrum, Docker, Supervisord, Figma, Stitch AI, Confluence, Jira?</p>
+            <p class="hero-cta-text">Если да, то тогда посмотрите это видео…</p>
           </div>
           <div class="hero__right">
             <div class="hero-video">
               <div class="video-placeholder"><button class="play-button" aria-label="Воспроизвести">▶</button></div>
             </div>
             <div class="countdown-timer" data-target="">
-              <div class="timer-label">Скидка заканчивается</div>
+              <div class="timer-label">Продажи начнутся через:</div>
               <div class="timer-display">
-                <div class="timer-unit"><span class="timer-number" data-days>00</span><span class="timer-text">дней</span></div>
-                <div class="timer-unit"><span class="timer-number" data-hours>00</span><span class="timer-text">часов</span></div>
-                <div class="timer-unit"><span class="timer-number" data-minutes>00</span><span class="timer-text">минут</span></div>
-                <div class="timer-unit"><span class="timer-number" data-seconds>00</span><span class="timer-text">секунд</span></div>
+                <div class="timer-unit"><span class="timer-number" data-days>0</span><span class="timer-text">дней</span></div>
+                <div class="timer-unit"><span class="timer-number" data-hours>5</span><span class="timer-text">часов</span></div>
+                <div class="timer-unit"><span class="timer-number" data-minutes>12</span><span class="timer-text">минут</span></div>
+                <div class="timer-unit"><span class="timer-number" data-seconds>15</span><span class="timer-text">секунд</span></div>
               </div>
             </div>
-            <div class="block--subscribe">
-              <form class="hero-form" action="#" method="post" novalidate>
-                <div class="form-title">Получите 50% скидку</div>
-                <div class="form-fields">
-                  <input class="form-input" type="text" name="name" placeholder="Имя" />
-                  <input class="form-input" type="email" name="email" placeholder="E‑mail" />
+          </div>
+          <div class="hero-discount-form block--subscribe">
+            <div class="discount-form-wrapper">
+              <h2 class="discount-form-title">Получите <span class="text-accent">50% скидку</span> в честь выхода курса</h2>
+              <p class="discount-form-subtitle">Просто заполните форму</p>
+              <form class="discount-form" action="#" method="post" novalidate>
+                <div class="form-fields-horizontal">
+                  <input class="form-input" type="text" name="name" placeholder="Ваше имя" />
+                  <input class="form-input" type="email" name="email" placeholder="Ваш email" />
+                  <button class="form-submit-purple" type="submit">Оформить заказ</button>
                 </div>
-                <button class="form-submit" type="submit">Получить скидку</button>
               </form>
             </div>
           </div>
