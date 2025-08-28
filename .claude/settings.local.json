@@ -6,7 +6,8 @@
       "Bash(dir)",
       "Bash(ls:*)",
       "Bash(find:*)",
-      "Bash(echo $HOME)"
+      "Bash(echo $HOME)",
+      "Bash(python:*)"
     ],
     "deny": [],
     "ask": [],

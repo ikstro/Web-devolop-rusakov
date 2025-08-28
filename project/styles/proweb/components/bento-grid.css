@@ -109,12 +109,12 @@
 
 /* Learning Methods Pattern - Main card + methods + course intro */
 .bento-grid--learning {
-  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: auto auto auto;
   grid-template-areas:
-    "books books books"
-    "free online course"
-    "conclusion conclusion conclusion";
+    "books books books books"
+    "online online free course"
+    "conclusion conclusion conclusion conclusion";
 }
 
 .bento-item--books {
@@ -142,9 +142,36 @@
     grid-template-columns: 1fr;
     grid-template-areas:
       "books"
-      "free"
       "online"
+      "free"
       "course"
       "conclusion";
+  }
+}
+
+/* Features Pattern - Hero + Stats */
+.bento-grid--features {
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "main-feature stats";
+  gap: 32px;
+}
+
+.bento-item--main-feature {
+  grid-area: main-feature;
+}
+
+.bento-item--stats {
+  grid-area: stats;
+}
+
+@media (max-width: 768px) {
+  .bento-grid--features {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "main-feature"
+      "stats";
+    gap: 24px;
   }
 }
