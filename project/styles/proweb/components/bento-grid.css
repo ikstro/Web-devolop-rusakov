@@ -106,3 +106,45 @@
       "actions";
   }
 }
+
+/* Learning Methods Pattern - Main card + methods + course intro */
+.bento-grid--learning {
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-rows: auto auto auto;
+  grid-template-areas:
+    "books books books"
+    "free online course"
+    "conclusion conclusion conclusion";
+}
+
+.bento-item--books {
+  grid-area: books;
+}
+
+.bento-item--free {
+  grid-area: free;
+}
+
+.bento-item--online {
+  grid-area: online;
+}
+
+.bento-item--course {
+  grid-area: course;
+}
+
+.bento-item--learning-conclusion {
+  grid-area: conclusion;
+}
+
+@media (max-width: 768px) {
+  .bento-grid--learning {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "books"
+      "free"
+      "online"
+      "course"
+      "conclusion";
+  }
+}

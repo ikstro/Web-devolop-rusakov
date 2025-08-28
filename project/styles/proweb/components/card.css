@@ -282,5 +282,56 @@
 .badge { display: inline-block; padding: 6px 10px; border-radius: 999px; font-weight: 600; font-size: 12px; }
 .badge[data-tone="indigo"]{ background: rgba(79,70,229,.1); color: var(--indigo-500); }
 
+/* Learning section specific styles - cleaned up */
+
+.course-cover {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+}
+
+/* Learning conclusion content */
+.learning-conclusion-content {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.learning-conclusion-text {
+  flex: 1;
+  text-align: left;
+  padding: 24px 0;
+}
+
+.learning-conclusion-text h4 {
+  margin-bottom: 16px;
+  font-size: 18px;
+}
+
+.learning-conclusion-text h3 {
+  margin: 0;
+  line-height: 1.2;
+}
+
+.learning-conclusion-image {
+  flex-shrink: 0;
+  width: 180px;
+}
+
+/* Mobile adjustments for learning content */
+@media (max-width: 768px) {
+  .learning-conclusion-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 16px;
+  }
+  
+  .learning-conclusion-image {
+    width: 150px;
+    align-self: center;
+  }
+}
+
 
 
