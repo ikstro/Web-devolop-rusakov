@@ -17,7 +17,6 @@
         <a class="logo" href="#top">WEB<span class="logo__accent">PRO</span></a>
         <nav class="nav" aria-label="Навигация">
           <a class="nav__link" href="#about">Об авторе</a>
-          <a class="nav__link" href="#features">Особенности</a>
           <a class="nav__link" href="#program">Программа</a>
           <a class="nav__link" href="#format">Формат</a>
           <a class="nav__link" href="#bonuses">Бонусы</a>
@@ -31,7 +30,6 @@
       </div>
       <nav class="mobile-menu" id="mobileMenu" aria-label="Мобильное меню">
         <a class="mobile-menu__link" href="#about">Об авторе</a>
-        <a class="mobile-menu__link" href="#features">Особенности</a>
         <a class="mobile-menu__link" href="#program">Программа</a>
         <a class="mobile-menu__link" href="#format">Формат</a>
         <a class="mobile-menu__link" href="#bonuses">Бонусы</a>
@@ -80,7 +78,7 @@
         <div class="decoration-2 hero-decoration"></div>
       </section>
 
-      <section class="section about-author" id="about">
+      <section class="section section-alt about-author" id="about">
         <div class="container">
           <div class="about-cards-grid">
             <!-- Карточка 1: Опыт и экспертиза - полная ширина -->
@@ -94,18 +92,20 @@
                   
                   <p>Помимо этого, с <strong>2010-го года</strong> создаю обучающие продукты по программированию.</p>
                   
-                  <div class="about-stats">
-                    <div class="about-stat">
-                      <span class="about-stat__number">70</span>
-                      <span class="about-stat__label">обучающих курсов</span>
-                    </div>
-                    <div class="about-stat">
-                      <span class="about-stat__number">750 000</span>
-                      <span class="about-stat__label">учеников прошло курсы</span>
-                    </div>
-                    <div class="about-stat">
-                      <span class="about-stat__number">1000+</span>
-                      <span class="about-stat__label">статей написано</span>
+                  <div class="card">
+                    <div class="about-stats">
+                      <div class="about-stat">
+                        <span class="about-stat__number">70</span>
+                        <span class="about-stat__label">обучающих курсов</span>
+                      </div>
+                      <div class="about-stat">
+                        <span class="about-stat__number">750 000</span>
+                        <span class="about-stat__label">учеников прошло курсы</span>
+                      </div>
+                      <div class="about-stat">
+                        <span class="about-stat__number">1000+</span>
+                        <span class="about-stat__label">статей написано</span>
+                      </div>
                     </div>
                   </div>
                   
@@ -155,7 +155,7 @@
               <div class="reviews-section">
                 <h3>Отзывы о моих курсах можно посмотреть по ссылкам ниже:</h3>
                 <div class="reviews-links">
-                  <div class="review-link-item">
+                  <div class="card">
                     <div class="review-icon">
                       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <polygon points="5,3 19,12 5,21 5,3"></polygon>
@@ -164,7 +164,7 @@
                     <h4>Видеоотзывы</h4>
                     <a href="#" class="btn btn--secondary">Смотреть видеоотзывы</a>
                   </div>
-                  <div class="review-link-item">
+                  <div class="card">
                     <div class="review-icon">
                       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
@@ -176,17 +176,17 @@
                     <h4>Группа в ВК с отзывами</h4>
                     <a href="#" class="btn btn--secondary">Читать в группе</a>
                   </div>
-                  <div class="review-link-item">
+                  <div class="card">
                     <div class="review-icon">
                       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26 12,2"></polygon>
                       </svg>
                     </div>
-                    <h4>Страница отзывов *</h4>
+                    <h4>Страница отзывов</h4>
+                    <p>Раньше несколько лет я тут собирал отзывы, если промотать стену вниз, то их там около 2500 штук</p>
                     <a href="#" class="btn btn--secondary">Открыть страницу</a>
                   </div>
                 </div>
-                <p class="reviews-note">* Раньше несколько лет я тут собирал отзывы, и если промотать стену вниз, то их там будет что-то около 2500 штук</p>
               </div>
             </div>
           </div>
@@ -230,59 +230,53 @@
           </div>
 
           <h3 class="h3 facts-heading">Где применяются навыки Web‑разработки?</h3>
-          <div class="grid grid--cards facts-cases">
-            <article class="card card-hover" data-elevation="lg">
+          <div class="bento-grid bento-grid--skills facts-cases">
+            <article class="card card-hover bento-item bento-item--item1">
               <div class="review-icon" aria-hidden="true">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18"/><path d="M3 10h18"/><path d="M5 14h14"/><path d="M7 18h10"/></svg>
               </div>
               <h4 class="h5">E‑commerce</h4>
-              <p>Интернет‑магазины: Amazon, Ozon, Wildberries.</p>
+              <p>Интернет‑магазины: Amazon, Ozon, Wildberries. Миллиарды транзакций ежедневно через современные web-платформы.</p>
             </article>
-            <article class="card card-hover" data-elevation="lg">
+            <article class="card card-hover bento-item bento-item--item2">
               <div class="review-icon" aria-hidden="true">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M7 8h10M7 12h6"/></svg>
               </div>
               <h4 class="h5">SaaS‑продукты</h4>
               <p>Облачные сервисы, CRM, ERP‑системы.</p>
             </article>
-            <article class="card card-hover" data-elevation="lg">
+            <article class="card card-hover bento-item bento-item--item3">
               <div class="review-icon" aria-hidden="true">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09a1.65 1.65 0 0 0-1-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09a1.65 1.65 0 0 0 1.51-1 1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33h0A1.65 1.65 0 0 0 9 3.09V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51h0a1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82v0A1.65 1.65 0 0 0 20.91 11H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
               </div>
               <h4 class="h5">Соцсети и медиа</h4>
               <p>От ВК до YouTube и новостных порталов.</p>
             </article>
-            <article class="card card-hover" data-elevation="lg">
+            <article class="card card-hover bento-item bento-item--item4">
               <div class="review-icon" aria-hidden="true">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3h7v7H3z"/><path d="M14 3h7v7h-7z"/><path d="M14 14h7v7h-7z"/><path d="M3 14h7v7H3z"/></svg>
               </div>
               <h4 class="h5">Автоматизация бизнеса</h4>
               <p>Web‑приложения для оптимизации процессов компаний.</p>
             </article>
-            <article class="card card-hover" data-elevation="lg">
+            <article class="card card-hover bento-item bento-item--item5">
               <div class="review-icon" aria-hidden="true">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
               </div>
               <h4 class="h5">Фриланс</h4>
               <p>Сайты и приложения для клиентов по всему миру.</p>
             </article>
-          </div>
-
-          <p class="facts-footnote">Web‑разработка — это билет в мир IT, где вы можете работать на себя или в топовых компаниях.</p>
-        </div>
-      </section>
-
-      <section class="section section-alt" id="features">
-        <div class="container">
-          <span class="overline">Особенности</span>
-          <h2 class="h2">Легкий, чистый, профессиональный</h2>
-          <div class="grid grid--cards">
-            <article class="card card-hover gradient-subtle"><h3 class="h4">Полный цикл</h3><p>Документация → дизайн → код → деплой.</p></article>
-            <article class="card card-hover gradient-subtle"><h3 class="h4">Практика</h3><p>Реальный проект и тесты.</p></article>
-            <article class="card card-hover gradient-subtle"><h3 class="h4">Цена</h3><p>В 10–15 раз дешевле онлайн‑школ.</p></article>
+            <div class="card card--timer-style bento-item bento-item--conclusion">
+              <div class="review-icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><path d="M21 12c-1 0-3-1-3-3s2-3 3-3 3 1 3 3-2 3-3 3"/><path d="M3 12c1 0 3-1 3-3s-2-3-3-3-3 1-3 3 2 3 3 3"/><path d="M12 3c0 1-1 3-3 3s-3-2-3-3 1-3 3-3 3 2 3 3"/><path d="M12 21c0-1-1-3-3-3s-3 2-3 3 1 3 3 3 3-2 3-3"/></svg>
+              </div>
+              <h4>Ключевой вывод</h4>
+              <p>Web‑разработка — это билет в мир IT, где вы можете работать на себя или в топовых компаниях.</p>
+            </div>
           </div>
         </div>
       </section>
+
 
       <section class="section" id="program">
         <div class="container">

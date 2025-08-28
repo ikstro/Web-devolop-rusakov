@@ -1,0 +1,108 @@
+/* Bento Grid Component - Asymmetric Layouts */
+
+/* Base Bento Grid */
+.bento-grid {
+  display: grid;
+  gap: 24px;
+  transition: all 0.3s ease;
+}
+
+/* Skills section - simple 3x2 grid */
+.bento-grid--skills {
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto auto;
+}
+
+/* Grid Items */
+.bento-item {
+  position: relative;
+}
+
+/* Conclusion item spans full width on bottom row */
+.bento-item--conclusion {
+  grid-column: 1 / -1;
+}
+
+/* Mobile Responsive - Linear Layout */
+@media (max-width: 768px) {
+  .bento-grid--skills {
+    grid-template-columns: 1fr;
+  }
+  
+  .bento-item--conclusion {
+    grid-column: 1;
+  }
+}
+
+/* Alternative Bento Pattern - Featured + Grid */
+.bento-grid--featured {
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-rows: auto auto auto;
+  grid-template-areas:
+    "hero hero card1"
+    "hero hero card2"
+    "hero hero card3";
+}
+
+.bento-item--hero {
+  grid-area: hero;
+}
+
+.bento-item--card1 {
+  grid-area: card1;
+}
+
+.bento-item--card2 {
+  grid-area: card2;
+}
+
+.bento-item--card3 {
+  grid-area: card3;
+}
+
+@media (max-width: 768px) {
+  .bento-grid--featured {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "hero"
+      "card1"
+      "card2"
+      "card3";
+  }
+}
+
+/* Dashboard Pattern - 2x2 with varying sizes */
+.bento-grid--dashboard {
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "stats chart"
+    "list actions";
+}
+
+.bento-item--stats {
+  grid-area: stats;
+}
+
+.bento-item--chart {
+  grid-area: chart;
+}
+
+.bento-item--list {
+  grid-area: list;
+}
+
+.bento-item--actions {
+  grid-area: actions;
+}
+
+@media (max-width: 768px) {
+  .bento-grid--dashboard {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "stats"
+      "chart"
+      "list"
+      "actions";
+  }
+}
