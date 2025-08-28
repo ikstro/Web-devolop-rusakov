@@ -29,15 +29,24 @@
   box-shadow: 0 6px 20px rgba(79, 70, 229, 0.08);
 }
 
-/* Card Modifiers */
-.card--white, .card[data-tone="solid"] { 
-  background: #fff; 
+/* Card Modifiers - System of 3 Presets */
+
+/* Preset 2: Highlight Card - белая карточка с легким градиентным фоном */
+.card--highlight {
+  background: linear-gradient(135deg, rgba(79,70,229,.02), rgba(124,58,237,.02));
+  padding: 24px;
+  text-align: center;
 }
 
-.card--gradient, .gradient-subtle, .card[data-tone="subtle"] { 
-  background: linear-gradient(135deg, rgba(79,70,229,.02), rgba(124,58,237,.02)); 
+/* Preset 3: Promo Style Card - для промо-элементов и таймеров */
+.card--promo-style {
+  background: linear-gradient(135deg, #f8faff 0%, #e5edff 100%);
+  border: 2px solid rgba(79,70,229,.1);
+  box-shadow: 0 20px 60px rgba(79,70,229,.15);
+  text-align: center;
 }
 
+/* Preset 4: Purple Gradient Card - для главных акцентных блоков */
 .card--purple-gradient {
   background: linear-gradient(135deg, var(--indigo-500), var(--violet-500));
   color: #fff;
@@ -52,13 +61,6 @@
 
 .card--purple-gradient p {
   color: rgba(255, 255, 255, 0.9);
-}
-
-.card--timer-style {
-  background: linear-gradient(135deg, #f8faff 0%, #e5edff 100%);
-  border: 2px solid rgba(79,70,229,.1);
-  box-shadow: 0 20px 60px rgba(79,70,229,.15);
-  text-align: center;
 }
 
 .card--large, .card[data-elevation="lg"] { 

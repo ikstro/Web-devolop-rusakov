@@ -119,6 +119,7 @@ h3, .h3 { font-size: var(--fs-h2); font-weight: 600; margin: 0 0 var(--space-8);
 .hero-buttons { display: flex; flex-wrap: wrap; gap: 16px; margin-bottom: var(--space-8); }
 
 .hero-video { background: #fff; border-radius: var(--radius-24); padding: 24px; box-shadow: 0 20px 60px rgba(0,0,0,.1); position: relative; aspect-ratio: 16/9; overflow: hidden; margin-bottom: 24px; }
+.project-video { background: #fff; border-radius: var(--radius-24); padding: 24px; box-shadow: 0 20px 60px rgba(0,0,0,.1); position: relative; aspect-ratio: 16/9; overflow: hidden; margin-bottom: 32px; }
 .video-placeholder { width: 100%; height: 100%; border-radius: 16px; background: linear-gradient(135deg, #f8faff, #e5edff); display: grid; place-items: center; }
 .play-button { width: 72px; height: 72px; border-radius: 50%; border: 0; color: #fff; background: linear-gradient(135deg, var(--indigo-500), var(--violet-500)); box-shadow: 0 8px 24px rgba(79,70,229,.4); cursor: pointer; transition: .2s ease; }
 .play-button:hover { transform: scale(1.06); box-shadow: 0 12px 32px rgba(79,70,229,.5); }
@@ -408,6 +409,16 @@ h3, .h3 { font-size: var(--fs-h2); font-weight: 600; margin: 0 0 var(--space-8);
   }
 }
 
+/* Module Results with Highlight Cards */
+.module-result {
+  margin-top: 24px;
+  padding: 20px 24px;
+}
+
+.module-result strong {
+  font-weight: 600;
+}
+
 /* Accordion */
 
 /* CTA Box */
@@ -475,6 +486,92 @@ body[data-variant="subscribe"] .block--order { display: none !important; }
     margin-top: 60px;
   }
   .action-bar-desktop { display: flex; }
+}
+
+/* Project Overview Section */
+.project-overview-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.project-links {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin-top: 32px;
+}
+
+.project-link-item {
+  text-align: center;
+  padding: 24px;
+  background: rgba(79, 70, 229, 0.02);
+  border-radius: var(--radius-16);
+  border: 1px solid rgba(79, 70, 229, 0.08);
+}
+
+.project-link-item h4 {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--gray-700);
+  margin-bottom: 16px;
+}
+
+.project-link-item .btn {
+  margin-top: 8px;
+}
+
+/* Exercises Section */
+.exercises-card {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.exercises-content .review-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 24px;
+  color: var(--indigo-500);
+  background: rgba(79, 70, 229, 0.1);
+  border-radius: 16px;
+}
+
+.exercises-content h3 {
+  margin-bottom: 20px;
+  line-height: 1.3;
+}
+
+.exercises-content p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--gray-600);
+  margin: 0;
+}
+
+/* Mobile adjustments for project sections */
+@media (max-width: 768px) {
+  .project-links {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-top: 24px;
+  }
+  
+  .project-link-item {
+    padding: 20px;
+  }
+  
+  .exercises-card {
+    padding: 32px 24px;
+  }
+  
+  .exercises-content .review-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 14px;
+  }
 }
 
 
