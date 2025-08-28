@@ -59,6 +59,33 @@ project/
 - **Typography**: Inter font family with clamp() for responsive sizing
 - **Responsive**: Mobile-first approach with breakpoints at 768px and 1024px
 
+### Component Architecture Rules
+- **🚨 СТРОГОЕ ПРАВИЛО**: Весь сайт строится исключительно на компонентах. Никаких стилей для UI элементов в main.css
+- **Процедура добавления**: Новые компоненты добавляются только после согласования. Создается новый `.css` файл в `styles/proweb/components/`
+- **Консистентность**: Все элементы одного типа должны использовать один компонент (все карточки = `.card`, все кнопки = `.btn`)
+- **Модификаторы**: Используются БЭМ-подобные модификаторы (`.card--large`, `.btn--secondary`, `.card--author`)
+- **CSS Variables**: Обязательное использование CSS custom properties для всех значений (цвета, размеры, тени)
+- **Наследование**: Базовые компоненты + модификаторы, никаких переопределений в других файлах
+
+### Bento Grid Layout System
+- **Основной подход**: Используем bento-grid (неравномерная сетка) для современного, динамичного лейаута
+- **CSS Grid Areas**: Именованные области сетки для четкой структуры и читаемости кода
+- **Адаптивность**: Bento-grid трансформируется на мобильных устройствах (<768px) в линейную структуру
+- **Базовый класс**: `.bento-grid` - основной контейнер для неравномерных сеток
+- **Модификаторы**: `.bento-grid--2x2`, `.bento-grid--3x2`, `.bento-grid--asymmetric` для разных вариантов
+- **Применение**: Секции с карточками, галереи, блоки контента, дашборды
+- **Пример структуры**:
+  ```css
+  .bento-grid {
+    display: grid;
+    gap: 24px;
+    grid-template-areas: 
+      "large large small1"
+      "large large small2"
+      "wide wide small3";
+  }
+  ```
+
 ### JavaScript Architecture
 - **ES6 Modules**: Modern module system
 - **Component Structure**: Modular JavaScript components
@@ -69,25 +96,49 @@ project/
   - Sticky navigation and action bars
   - Form handling
 
-### Key Components
+### Available Components
 
-1. **Sticky Header** (`site-header`)
+**UI Components** (в `styles/proweb/components/`):
+
+1. **Cards** (`card.css`)
+   - `.card` - базовая карточка с фиолетовыми тенями
+   - `.card--white` - белый фон
+   - `.card--gradient` - градиентный фон
+   - `.card--large` - увеличенные тени
+   - `.card--author` - специальный стиль для секции "Об авторе"
+   - `.card--author-full` / `.card--author-half` - модификаторы размеров
+
+2. **Buttons** (`buttons.css`)
+   - `.btn` - базовая кнопка
+   - `.btn--primary` - основная кнопка (фиолетовый градиент)
+   - `.btn--secondary` - вторичная кнопка (прозрачная с обводкой)
+   - `.btn--lg` - увеличенный размер
+
+3. **Accordion** (`accordion.css`)
+   - `.accordion` - контейнер аккордеона
+   - `.accordion__item` - элемент аккордеона
+   - `.accordion__header` - заголовок (кликабельный)
+   - `.accordion__panel` - раскрывающееся содержимое
+
+4. **Grid System** (`card.css`)
+   - `.grid` - базовая сетка
+   - `.grid--cards` - сетка для карточек
+   - `.bento-grid` - неравномерная сетка (планируется)
+
+**Layout Sections**:
+
+5. **Sticky Header** (`site-header`)
    - Fixed navigation with blur backdrop
    - Mobile hamburger menu
    - Responsive CTA button
 
-2. **Hero Section** (`hero-section`)
+6. **Hero Section** (`hero-section`)
    - Two-column layout (content + video/form)
    - Countdown timer
    - Statistics display
    - Dual block system (order vs subscribe)
 
-3. **Accordion** (`accordion`)
-   - Collapsible content sections
-   - Used in program and FAQ sections
-   - JavaScript-powered expand/collapse
-
-4. **Action Bars** (`action-bar`)
+7. **Action Bars** (`action-bar`)
    - Desktop: Vertical floating buttons
    - Mobile: Bottom sticky bar
    - Appears on scroll
@@ -105,6 +156,30 @@ Since this is a vanilla HTML/CSS/JavaScript project, no build commands are neces
 1. **Development**: Open `project/index.html` in a browser or use a local server
 2. **Testing**: Test responsiveness using browser dev tools
 3. **Validation**: Use W3C HTML validator to ensure HTML5 compliance
+
+## Development Rules
+
+### 🚫 ЗАПРЕЩЕНО:
+- Создавать стили UI компонентов напрямую в `main.css`
+- Переопределять компоненты в других файлах (только через модификаторы)
+- Использовать inline стили или !important
+- Создавать новые компоненты без согласования
+- Нарушать консистентность (например, разные стили для одинаковых элементов)
+
+### ✅ ОБЯЗАТЕЛЬНО:
+- ВСЕ UI элементы должны использовать существующие компоненты
+- Новые компоненты согласовываются и создаются как отдельные `.css` файлы
+- Использовать CSS custom properties для всех значений (colors, sizes, shadows)
+- Следовать БЭМ-подобной методологии для модификаторов
+- Тестировать адаптивность на всех устройствах (320px+)
+- Обеспечивать hover-эффекты для всех интерактивных элементов
+
+### Процесс добавления нового компонента:
+1. **Согласование**: Обсудить необходимость и структуру компонента
+2. **Создание**: Создать файл `styles/proweb/components/[component-name].css`
+3. **Импорт**: Добавить `@import` в `main.css`
+4. **Документация**: Добавить компонент в список в CLAUDE.md
+5. **Тестирование**: Проверить работу на всех breakpoints
 
 ## Styling Guidelines
 
@@ -129,3 +204,55 @@ Target modern browsers with support for:
 - CSS Custom Properties
 - ES6 Modules
 - Backdrop-filter (for header blur effect)
+
+## Bento Grid Patterns
+
+### Pattern 1: Asymmetric 3x3
+Идеально для секций с основным контентом и дополнительной информацией:
+```html
+<div class="bento-grid bento-grid--asymmetric">
+  <div class="bento-item bento-item--large">Основной контент</div>
+  <div class="bento-item bento-item--small">Дополнительно 1</div>
+  <div class="bento-item bento-item--small">Дополнительно 2</div>
+  <div class="bento-item bento-item--wide">Широкий блок</div>
+</div>
+```
+
+### Pattern 2: Featured + Grid
+Для секций с выделенным элементом и сеткой:
+```html
+<div class="bento-grid bento-grid--featured">
+  <div class="bento-item bento-item--hero">Главная карточка</div>
+  <div class="bento-item">Карточка 1</div>
+  <div class="bento-item">Карточка 2</div>
+  <div class="bento-item">Карточка 3</div>
+</div>
+```
+
+### Pattern 3: Dashboard Layout
+Для сложных интерфейсов:
+```html
+<div class="bento-grid bento-grid--dashboard">
+  <div class="bento-item bento-item--stats">Статистика</div>
+  <div class="bento-item bento-item--chart">График</div>
+  <div class="bento-item bento-item--list">Список</div>
+  <div class="bento-item bento-item--actions">Действия</div>
+</div>
+```
+
+### CSS Grid Areas Examples:
+```css
+.bento-grid--asymmetric {
+  grid-template-areas: 
+    "large large small1"
+    "large large small2"
+    "wide  wide  wide";
+}
+
+.bento-grid--featured {
+  grid-template-areas:
+    "hero hero card1"
+    "hero hero card2"
+    "hero hero card3";
+}
+```

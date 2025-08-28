@@ -84,7 +84,7 @@
         <div class="container">
           <div class="about-cards-grid">
             <!-- Карточка 1: Опыт и экспертиза - полная ширина -->
-            <div class="about-card about-card--full">
+            <div class="card card--author card--author-full">
               <span class="overline">Об авторе</span>
               <h2 class="about-main-title">Меня зовут <span class="text-accent">Михаил Русаков</span></h2>
               
@@ -119,7 +119,7 @@
             </div>
 
             <!-- Карточка 2: Преимущества обучения - 50% ширины -->
-            <div class="about-card about-card--half">
+            <div class="card card--author card--author-half">
               <div class="about-card__header">
                 <span class="about-card__number">1/</span>
                 <h3 class="about-card__title">Преимущества обучения</h3>
@@ -134,7 +134,7 @@
             </div>
 
             <!-- Карточка 3: Подход к обучению - 50% ширины -->
-            <div class="about-card about-card--half">
+            <div class="card card--author card--author-half">
               <div class="about-card__header">
                 <span class="about-card__number">2/</span>
                 <h3 class="about-card__title">Подход к обучению</h3>
@@ -151,7 +151,7 @@
             </div>
 
             <!-- Карточка 4: Отзывы и доверие - полная ширина -->
-            <div class="about-card about-card--full">
+            <div class="card card--author card--author-full">
               <div class="reviews-section">
                 <h3>Отзывы о моих курсах можно посмотреть по ссылкам ниже:</h3>
                 <div class="reviews-links">
@@ -190,6 +190,85 @@
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section class="section section-alt facts-section" id="why-webdev">
+        <div class="container">
+          <span class="overline">Просто факты</span>
+          <h2 class="h2">Почему вам стоит учиться Web‑разработке?</h2>
+
+          <div class="grid grid--cards facts-cards">
+            <article class="card card-hover" data-elevation="lg">
+              <div class="review-icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20h18"/><path d="M18 20V10l-5 4-4-6-6 10"/></svg>
+              </div>
+              <h3 class="h4">Рынок растёт</h3>
+              <p>По данным hh.ru, вакансии для Web‑разработчиков растут на десятки процентов каждый год.</p>
+            </article>
+            <article class="card card-hover" data-elevation="lg">
+              <div class="review-icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1v22"/><path d="M5 9h14"/><path d="M7 9V5h4v4"/><path d="M13 9V3h4v6"/></svg>
+              </div>
+              <h3 class="h4">Высокие зарплаты</h3>
+              <p>Junior — 100 000 ₽, Middle — 200 000 ₽, Senior — 350 000+ ₽. От Junior до Senior за 3–5 лет.</p>
+            </article>
+            <article class="card card-hover" data-elevation="lg">
+              <div class="review-icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8l9-5 9 5v8l-9 5-9-5z"/><path d="M7 12h10"/><path d="M7 16h6"/></svg>
+              </div>
+              <h3 class="h4">Удалённая работа</h3>
+              <p>Одна из самых востребованных сфер для удалёнки по всему миру.</p>
+            </article>
+            <article class="card card-hover" data-elevation="lg">
+              <div class="review-icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+              </div>
+              <h3 class="h4">Будущее за IT</h3>
+              <p>Google, Яндекс, Amazon и тысячи стартапов ищут специалистов, создающих современные Web‑приложения.</p>
+            </article>
+          </div>
+
+          <h3 class="h3 facts-heading">Где применяются навыки Web‑разработки?</h3>
+          <div class="grid grid--cards facts-cases">
+            <article class="card card-hover" data-elevation="lg">
+              <div class="review-icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18"/><path d="M3 10h18"/><path d="M5 14h14"/><path d="M7 18h10"/></svg>
+              </div>
+              <h4 class="h5">E‑commerce</h4>
+              <p>Интернет‑магазины: Amazon, Ozon, Wildberries.</p>
+            </article>
+            <article class="card card-hover" data-elevation="lg">
+              <div class="review-icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M7 8h10M7 12h6"/></svg>
+              </div>
+              <h4 class="h5">SaaS‑продукты</h4>
+              <p>Облачные сервисы, CRM, ERP‑системы.</p>
+            </article>
+            <article class="card card-hover" data-elevation="lg">
+              <div class="review-icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09a1.65 1.65 0 0 0-1-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09a1.65 1.65 0 0 0 1.51-1 1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33h0A1.65 1.65 0 0 0 9 3.09V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51h0a1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82v0A1.65 1.65 0 0 0 20.91 11H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+              </div>
+              <h4 class="h5">Соцсети и медиа</h4>
+              <p>От ВК до YouTube и новостных порталов.</p>
+            </article>
+            <article class="card card-hover" data-elevation="lg">
+              <div class="review-icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3h7v7H3z"/><path d="M14 3h7v7h-7z"/><path d="M14 14h7v7h-7z"/><path d="M3 14h7v7H3z"/></svg>
+              </div>
+              <h4 class="h5">Автоматизация бизнеса</h4>
+              <p>Web‑приложения для оптимизации процессов компаний.</p>
+            </article>
+            <article class="card card-hover" data-elevation="lg">
+              <div class="review-icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+              </div>
+              <h4 class="h5">Фриланс</h4>
+              <p>Сайты и приложения для клиентов по всему миру.</p>
+            </article>
+          </div>
+
+          <p class="facts-footnote">Web‑разработка — это билет в мир IT, где вы можете работать на себя или в топовых компаниях.</p>
         </div>
       </section>
 
