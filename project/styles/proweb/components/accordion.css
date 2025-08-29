@@ -204,7 +204,7 @@
 /* Bonus Accordion Styles */
 .accordion--bonus .accordion__header {
   padding: 24px;
-  align-items: flex-start;
+  align-items: center;
   min-height: 140px;
 }
 
@@ -212,7 +212,7 @@
   display: flex;
   gap: 24px;
   width: 100%;
-  align-items: flex-start;
+  align-items: center;
   padding-right: 60px;
 }
 
@@ -233,7 +233,7 @@
 
 .bonus-title {
   font-family: var(--font-sans);
-  font-size: var(--fs-h3);
+  font-size: var(--fs-h4);
   font-weight: 600;
   color: var(--gray-800);
   line-height: 1.3;
@@ -258,7 +258,8 @@
 
 .accordion--bonus .accordion__caret {
   position: absolute;
-  top: 24px;
+  top: 50%;
+  transform: translateY(-50%);
   right: 24px;
   z-index: 1;
 }
@@ -280,7 +281,8 @@
   
   
   .accordion--bonus .accordion__caret {
-    top: 20px;
+    top: 50%;
+    transform: translateY(-50%);
     right: 20px;
   }
 }
