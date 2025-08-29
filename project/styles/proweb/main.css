@@ -75,10 +75,10 @@ img { max-width: 100%; display: block; }
 
 /* Typography */
 h1, .h1 { font-size: var(--fs-h1); font-weight: 700; line-height: 1.1; letter-spacing: -0.02em; margin: 0 0 var(--space-4); }
-h2, .h2 { font-size: var(--fs-h2); font-weight: 600; line-height: 1.2; letter-spacing: -0.01em; margin: 0 0 var(--space-8); }
+h2, .h2 { font-size: var(--fs-h2); font-weight: 600; line-height: 1.2; letter-spacing: -0.01em; margin: 0 0 var(--space-4); }
 h3, .h3 { font-size: var(--fs-h2); font-weight: 600; margin: 0 0 var(--space-8); }
 .h4 { font-size: var(--fs-h4); font-weight: 600; margin: 0 0 var(--space-2); color: var(--gray-700); }
-.subtitle { font-size: clamp(18px, 2.5vw, 24px); line-height: 1.6; color: var(--gray-500); margin: 0 0 var(--space-6); }
+.subtitle { font-size: clamp(16px, 2vw, 20px); line-height: 1.6; color: var(--gray-500); margin: 0 0 var(--space-6); }
 .overline { font-size: 14px; font-weight: 600; color: var(--indigo-500); text-transform: uppercase; letter-spacing: .08em; display: inline-block; margin-bottom: var(--space-3); }
 .text-accent { background: linear-gradient(135deg, var(--indigo-500), var(--violet-500)); -webkit-background-clip: text; background-clip: text; color: transparent; }
 
@@ -412,11 +412,6 @@ h3, .h3 { font-size: var(--fs-h2); font-weight: 600; margin: 0 0 var(--space-8);
 /* Module Results with Highlight Cards */
 .module-result {
   margin-top: 24px;
-  padding: 20px 24px;
-}
-
-.module-result strong {
-  font-weight: 600;
 }
 
 /* Accordion */
