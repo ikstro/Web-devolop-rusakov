@@ -34,7 +34,7 @@
 .accordion__title { 
   pointer-events: none;
   font-family: var(--font-sans);
-  font-size: var(--fs-h4);
+  font-size: clamp(16px, 2.5vw, 18px);
   font-weight: 600;
   line-height: 1.4;
   color: var(--gray-800);

@@ -2,6 +2,8 @@
 @import url("./components/card.css");
 @import url("./components/bento-grid.css");
 @import url("./components/accordion.css");
+@import url("./components/timeline.css");
+@import url("./components/checklist.css");
 
 /* Design System — tokens */
 :root {
@@ -55,6 +57,17 @@
   --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.08);
   --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.12);
   --shadow-btn: 0 6px 20px rgba(79, 70, 229, 0.3);
+  
+  /* Purple shadows for components */
+  --shadow-purple-sm: 0 2px 8px rgba(79, 70, 229, 0.1);
+  --shadow-purple: 0 4px 16px rgba(79, 70, 229, 0.15);
+  --shadow-purple-lg: 0 8px 24px rgba(79, 70, 229, 0.2);
+  
+  /* Text colors */
+  --color-text: var(--gray-800);
+  --color-text-light: var(--gray-600);
+  --color-primary: var(--indigo-500);
+  --color-secondary: var(--violet-500);
 }
 
 /* Base */
@@ -566,6 +579,385 @@ body[data-variant="subscribe"] .block--order { display: none !important; }
     width: 56px;
     height: 56px;
     border-radius: 14px;
+  }
+}
+
+/* Requirements Important Block */
+.requirements-important {
+  margin: 24px 0;
+}
+
+.requirements-important-content {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.requirements-important-content .review-icon {
+  width: 48px;
+  height: 48px;
+  margin: 0;
+  flex-shrink: 0;
+  color: var(--indigo-500);
+  background: rgba(79, 70, 229, 0.1);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.requirements-important-text {
+  flex: 1;
+}
+
+.requirements-important-text h4 {
+  margin-bottom: 12px;
+  color: var(--gray-800);
+}
+
+.requirements-important-text p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--gray-600);
+}
+
+@media (max-width: 768px) {
+  .requirements-important-content {
+    gap: 16px;
+  }
+  
+  .requirements-important-content .review-icon {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* Guarantee Refund Block */
+.guarantee-refund {
+  margin: 24px 0;
+}
+
+.guarantee-refund-content {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.guarantee-refund-content .review-icon {
+  width: 48px;
+  height: 48px;
+  margin: 0;
+  flex-shrink: 0;
+  color: var(--green-500);
+  background: rgba(16, 185, 129, 0.1);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.guarantee-refund-text {
+  flex: 1;
+}
+
+.guarantee-refund-text h4 {
+  margin-bottom: 12px;
+  color: var(--gray-800);
+}
+
+.guarantee-refund-text p {
+  margin: 0 0 16px 0;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--gray-600);
+}
+
+.guarantee-period {
+  background: rgba(16, 185, 129, 0.05);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+  border-radius: 8px;
+  padding: 12px 16px;
+  margin: 0;
+}
+
+.guarantee-period strong {
+  color: var(--green-600);
+  font-size: 15px;
+}
+
+@media (max-width: 768px) {
+  .guarantee-refund-content {
+    gap: 16px;
+  }
+  
+  .guarantee-refund-content .review-icon {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* Pricing Section Styles */
+.pricing-summary {
+  text-align: center;
+  margin: 32px 0;
+}
+
+.pricing-summary p {
+  font-size: clamp(18px, 3vw, 22px);
+  line-height: 1.4;
+  margin: 0;
+}
+
+.pricing-summary strong {
+  font-size: clamp(24px, 4vw, 32px);
+  font-weight: 700;
+  display: block;
+  margin-top: 8px;
+}
+
+@media (max-width: 768px) {
+  .pricing-summary {
+    margin: 24px 0;
+  }
+}
+
+/* Order Hero Section */
+.order-hero-section {
+  background: linear-gradient(135deg, var(--bg-hero-1) 0%, var(--bg-hero-2) 100%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 120px 0 80px;
+  position: relative;
+  overflow: hidden;
+}
+
+.order-hero__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 48px;
+  grid-template-rows: auto auto;
+}
+
+.order-hero-title {
+  font-size: var(--fs-h1);
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--gray-800);
+  letter-spacing: -0.02em;
+  margin-bottom: var(--space-4);
+}
+
+.order-hero-subtitle {
+  font-size: clamp(16px, 2vw, 20px);
+  line-height: 1.6;
+  color: var(--gray-500);
+  margin-bottom: var(--space-6);
+}
+
+.countdown-section {
+  margin-bottom: var(--space-8);
+}
+
+.countdown-label {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--indigo-500);
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.pricing-box {
+  background: white;
+  border-radius: 20px;
+  padding: 32px;
+  box-shadow: 0 12px 40px rgba(0,0,0,.08);
+  border: 1px solid rgba(79,70,229,.1);
+  margin-bottom: var(--space-8);
+  text-align: center;
+}
+
+.price-comparison {
+  margin-bottom: 24px;
+}
+
+.price-old, .price-current {
+  margin-bottom: 8px;
+}
+
+.price-old {
+  color: var(--gray-500);
+  text-decoration: line-through;
+  font-size: 16px;
+}
+
+.price-current {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--gray-800);
+}
+
+.price-value {
+  font-weight: 700;
+}
+
+.conclusion-text {
+  background: rgba(255,255,255,.8);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(79,70,229,.1);
+  border-radius: 20px;
+  padding: 32px;
+  margin: var(--space-8) 0;
+}
+
+.conclusion-text p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--gray-600);
+  margin-bottom: 16px;
+}
+
+.conclusion-cta {
+  color: var(--indigo-500) !important;
+  font-size: 18px !important;
+}
+
+.author-signature {
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(79,70,229,.1);
+}
+
+.author-signature p {
+  color: var(--gray-800) !important;
+  margin: 0 !important;
+  text-align: right;
+}
+
+.pricing-warning {
+  background: rgba(220, 38, 38, 0.05);
+  border: 1px solid rgba(220, 38, 38, 0.2);
+  border-radius: 12px;
+  padding: 20px;
+  margin-top: var(--space-6);
+}
+
+.pricing-warning p {
+  color: #dc2626;
+  font-size: 15px;
+  margin: 0;
+  font-weight: 500;
+}
+
+/* Course Image */
+.course-image-wrapper {
+  margin-bottom: 32px;
+}
+
+.course-image {
+  background: #fff;
+  border-radius: var(--radius-24);
+  padding: 32px;
+  box-shadow: 0 20px 60px rgba(0,0,0,.1);
+  position: relative;
+  aspect-ratio: 4/3;
+  overflow: hidden;
+}
+
+.course-placeholder {
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #f8faff, #e5edff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.course-cover {
+  color: var(--indigo-500);
+}
+
+.course-cover h3 {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 16px 0 8px 0;
+  color: var(--gray-800);
+}
+
+.course-cover p {
+  font-size: 16px;
+  color: var(--gray-600);
+  margin: 0;
+}
+
+/* Desktop Layout for Order Hero */
+@media (min-width: 1024px) {
+  .order-hero__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+    grid-template-rows: auto;
+  }
+}
+
+/* Mobile adjustments for order hero */
+@media (max-width: 768px) {
+  .order-hero-section {
+    padding: 80px 0 60px;
+    min-height: auto;
+  }
+  
+  .conclusion-text, .pricing-box {
+    padding: 24px;
+  }
+  
+  .course-image {
+    padding: 24px;
+  }
+}
+
+/* FAQ Section Specific Styles */
+#faq .accordion__header {
+  padding: 20px 24px;
+  font-size: 16px;
+}
+
+#faq .accordion__title {
+  font-size: clamp(15px, 2vw, 16px);
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+#faq .accordion__panel {
+  padding: 0;
+}
+
+#faq .accordion__panel p {
+  padding: 16px 24px 20px 24px;
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--gray-600);
+  background: rgba(79, 70, 229, 0.02);
+}
+
+@media (max-width: 768px) {
+  #faq .accordion__header {
+    padding: 18px 20px;
+    font-size: 15px;
+  }
+  
+  #faq .accordion__title {
+    font-size: 14px;
+  }
+  
+  #faq .accordion__panel p {
+    padding: 14px 20px 18px 20px;
+    font-size: 14px;
   }
 }
 
