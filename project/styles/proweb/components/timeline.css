@@ -15,16 +15,15 @@
 .timeline__list::before {
   content: '';
   position: absolute;
-  top: 0;
+  top: 48px;
   left: 24px;
   width: 2px;
-  height: 100%;
-  background: linear-gradient(
-    to bottom,
-    var(--color-primary),
-    var(--color-secondary)
-  );
-  border-radius: 1px;
+  height: calc(100% - 96px);
+  border: 1px dashed rgba(79, 70, 229, 0.3);
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+  background: none;
 }
 
 .timeline__item {
@@ -43,15 +42,14 @@
   top: 4px;
   width: 48px;
   height: 48px;
-  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
-  color: white;
-  border-radius: 50%;
+  background: rgba(79,70,229,0.1);
+  color: var(--indigo-500);
+  border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: 700;
-  font-size: clamp(14px, 2vw, 16px);
-  box-shadow: var(--shadow-purple);
+  font-size: 16px;
   z-index: 2;
 }
 
@@ -91,16 +89,7 @@
   margin: 0;
 }
 
-/* Hover effects */
-.timeline__item:hover .timeline__number {
-  transform: scale(1.1);
-  transition: transform 0.2s ease;
-}
-
-.timeline__item:hover .timeline__content {
-  transform: translateX(4px);
-  transition: transform 0.2s ease;
-}
+/* Removed hover effects as requested */
 
 /* Mobile adaptations */
 @media (max-width: 768px) {
@@ -120,6 +109,7 @@
     width: 36px;
     height: 36px;
     font-size: 14px;
+    border-radius: 10px;
   }
   
   .timeline__content {
@@ -144,5 +134,6 @@
     width: 32px;
     height: 32px;
     font-size: 12px;
+    border-radius: 8px;
   }
 }

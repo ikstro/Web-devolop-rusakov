@@ -29,21 +29,23 @@
 .checklist__icon {
   width: 24px;
   height: 24px;
-  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
-  border-radius: 50%;
+  background: rgba(79,70,229,0.1);
+  color: var(--indigo-500);
+  border-radius: 6px;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-right: 16px;
   margin-top: 2px;
   flex-shrink: 0;
-  box-shadow: var(--shadow-purple-sm);
+  font-weight: 700;
+  line-height: 1;
 }
 
 .checklist__icon::before {
   content: '✓';
-  color: white;
-  font-size: 14px;
+  color: var(--indigo-500);
+  font-size: 12px;
   font-weight: 700;
 }
 
@@ -57,6 +59,7 @@
 /* Numbered variant */
 .checklist--numbered .checklist__icon::before {
   content: counter(checklist-counter);
+  color: var(--indigo-500);
   font-size: 12px;
   font-weight: 700;
 }
@@ -78,10 +81,11 @@
   width: 32px;
   height: 32px;
   margin-right: 20px;
+  border-radius: 8px;
 }
 
 .checklist--large .checklist__icon::before {
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .checklist--large .checklist__text {
@@ -120,6 +124,7 @@
 
 .checklist-grid .checklist__icon {
   margin-top: 0;
+  border-radius: 8px;
 }
 
 /* Compact variant */
@@ -131,10 +136,11 @@
   width: 20px;
   height: 20px;
   margin-right: 12px;
+  border-radius: 5px;
 }
 
 .checklist--compact .checklist__icon::before {
-  font-size: 12px;
+  font-size: 10px;
 }
 
 .checklist--compact .checklist__text {
@@ -156,10 +162,11 @@
     width: 20px;
     height: 20px;
     margin-right: 12px;
+    border-radius: 5px;
   }
   
   .checklist__icon::before {
-    font-size: 12px;
+    font-size: 10px;
   }
 }
 
