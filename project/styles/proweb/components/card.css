@@ -15,6 +15,7 @@
 .card h3, .card h4, .card .h3, .card .h4 {
   color: var(--gray-800);
   font-weight: 600;
+  font-size: 18px;
   margin: 0 0 var(--space-2);
 }
 
