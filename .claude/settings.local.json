@@ -9,7 +9,8 @@
       "Bash(echo $HOME)",
       "Bash(python:*)",
       "Bash(curl:*)",
-      "Bash(grep:*)"
+      "Bash(grep:*)",
+      "Bash(start:*)"
     ],
     "deny": [],
     "ask": [],
