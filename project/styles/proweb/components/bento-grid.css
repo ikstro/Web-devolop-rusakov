@@ -137,6 +137,19 @@
   grid-area: conclusion;
 }
 
+/* Learning section icon styling - consistent with other cards */
+.bento-grid--learning .review-icon {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 16px;
+  color: var(--indigo-500);
+  background: rgba(79, 70, 229, 0.1);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 @media (max-width: 768px) {
   .bento-grid--learning {
     grid-template-columns: 1fr;
