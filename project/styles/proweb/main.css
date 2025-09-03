@@ -125,8 +125,8 @@ h3, .h3 { font-size: var(--fs-h2); font-weight: 600; margin: 0 0 var(--space-8);
 
 /* Hero */
 .section-hero { background: linear-gradient(135deg, var(--bg-hero-1) 0%, var(--bg-hero-2) 100%); }
-.hero-section { min-height: 100vh; display: flex; align-items: center; padding: 120px 0 80px; position: relative; overflow: hidden; }
-.hero__grid { display: grid; grid-template-columns: 1fr; gap: 48px; grid-template-rows: auto auto auto; }
+.hero-section { min-height: 80vh; display: flex; align-items: center; padding: 40px 0 40px; position: relative; overflow: hidden; }
+.hero__grid { display: grid; grid-template-columns: 1fr; gap: 24px; grid-template-rows: auto auto auto; }
 .hero-title { font-size: var(--fs-h1); font-weight: 700; line-height: 1.1; color: var(--gray-800); letter-spacing: -0.02em; margin-bottom: var(--space-4); }
 .hero-subtitle { font-size: clamp(16px, 2vw, 20px); line-height: 1.6; color: var(--gray-500); margin-bottom: var(--space-5); max-width: 90%; }
 .hero-cta-text { font-size: 18px; color: var(--gray-700); margin-bottom: var(--space-6); font-weight: 500; }
@@ -157,7 +157,7 @@ h3, .h3 { font-size: var(--fs-h2); font-weight: 600; margin: 0 0 var(--space-8);
   box-shadow: 0 20px 60px rgba(79,70,229,.15); 
   border: 2px solid rgba(79,70,229,.1); 
   text-align: center; 
-  margin-bottom: 24px;
+  margin-bottom: 8px;
   position: relative;
   overflow: hidden;
 }
@@ -243,7 +243,7 @@ h3, .h3 { font-size: var(--fs-h2); font-weight: 600; margin: 0 0 var(--space-8);
 
 /* Hero Discount Form */
 .hero-discount-form {
-  margin-top: 40px;
+  margin-top: 12px;
   grid-column: 1 / -1;
   grid-row: 3;
 }
@@ -484,15 +484,16 @@ body[data-variant="subscribe"] .block--order { display: none !important; }
 @media (min-width: 1024px) {
   .nav { display: flex; }
   .burger { display: none; }
+  .hero-section { padding: 60px 0 50px; }
   .hero__grid { 
     grid-template-columns: 1fr 1fr; 
-    gap: 80px; 
+    gap: 32px; 
     align-items: start;
     grid-template-rows: auto auto;
   }
   .hero-discount-form {
     grid-row: 2;
-    margin-top: 60px;
+    margin-top: 24px;
   }
   .action-bar-desktop { display: flex; }
 }
