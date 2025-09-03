@@ -510,6 +510,32 @@
   margin: 0;
 }
 
+/* How Works Section - Card-based Layout */
+.grid--how-works {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.how-works-item {
+  position: relative;
+  text-align: left;
+  padding: 24px;
+}
+
+.how-works-title {
+  font-size: clamp(16px, 3vw, 18px);
+  font-weight: 600;
+  color: var(--color-text);
+  margin: 16px 0 8px 0;
+}
+
+.how-works-item p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--gray-700);
+  margin: 0;
+}
+
 /* Audience Section Styles */
 .section-subtitle {
   font-size: 18px;
@@ -596,6 +622,19 @@
   }
   
   .result-item p {
+    font-size: 14px;
+  }
+
+  .grid--how-works {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+  }
+  
+  .how-works-item {
+    padding: 20px;
+  }
+  
+  .how-works-item p {
     font-size: 14px;
   }
   
