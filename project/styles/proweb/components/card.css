@@ -64,6 +64,20 @@
   color: rgba(255, 255, 255, 0.9);
 }
 
+/* Violet border card - similar to project-link-item styling */
+.card.card--violet-border {
+  background: rgba(79, 70, 229, 0.02) !important;
+  border: 1px solid rgba(79, 70, 229, 0.08) !important;
+  box-shadow: none !important;
+}
+
+/* Specific override for author conclusion card */
+.author-conclusion-card.card--violet-border {
+  background: rgba(79, 70, 229, 0.02) !important;
+  border: 1px solid rgba(79, 70, 229, 0.08) !important;
+  box-shadow: none !important;
+}
+
 .card--large, .card[data-elevation="lg"] { 
   box-shadow: 0 4px 16px rgba(79, 70, 229, 0.04);
 }
