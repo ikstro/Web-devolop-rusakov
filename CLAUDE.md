@@ -243,6 +243,154 @@ Target modern browsers with support for:
 - Использовать растровые форматы (PNG, JPG) для иконок
 - Смешивать разные стили иконок на одной странице
 
+## Tabler Icons Integration System
+
+### 🛠️ Инструменты для работы с иконками
+
+В проекте созданы специальные инструменты для работы с Tabler Icons:
+
+1. **tabler-icons-helper.js** - JavaScript утилита для получения иконок
+2. **icon-finder.html** - Веб-интерфейс для поиска и копирования иконок
+
+### 📦 Использование tabler-icons-helper.js
+
+Подключение в HTML:
+```html
+<script src="tabler-icons-helper.js"></script>
+<script>
+  // Получить иконку
+  const iconSvg = await TablerIcons.getIcon('user');
+  
+  // Получить только paths
+  const paths = await TablerIcons.getIconPaths('star');
+  
+  // Поиск подходящих иконок
+  const suggestions = TablerIcons.suggestIcons('user');
+  
+  // Проверить доступность
+  const isAvailable = await TablerIcons.isIconAvailable('play');
+</script>
+```
+
+### 🔍 Использование Icon Finder
+
+1. Откройте `project/icon-finder.html` в браузере
+2. Введите название иконки или ключевое слово
+3. Выберите подходящую иконку из результатов
+4. Скопируйте готовый HTML или только path элементы
+5. Вставьте в свой код
+
+### ⚡ Быстрое получение иконок через CDN
+
+Для получения актуальных иконок используйте:
+```bash
+# Получить иконку напрямую из CDN
+curl "https://cdn.jsdelivr.net/npm/@tabler/icons@latest/icons/ICON_NAME.svg"
+
+# Примеры:
+curl "https://cdn.jsdelivr.net/npm/@tabler/icons@latest/icons/user.svg"
+curl "https://cdn.jsdelivr.net/npm/@tabler/icons@latest/icons/star.svg"
+curl "https://cdn.jsdelivr.net/npm/@tabler/icons@latest/icons/play.svg"
+```
+
+### 📚 Популярные иконки в проекте
+
+| Назначение | Иконка | Tabler Name |
+|------------|--------|-------------|
+| Пользователи | 👤 | `user`, `users` |
+| Избранное | ⭐ | `star`, `heart` |
+| Воспроизведение | ▶️ | `player-play`, `video` |
+| Настройки | ⚙️ | `settings`, `adjustments` |
+| Безопасность | 🛡️ | `shield`, `shield-check` |
+| Проверка | ✅ | `check`, `circle-check` |
+| Время | 🕐 | `clock`, `calendar` |
+| Дом | 🏠 | `home`, `building` |
+| Облако | ☁️ | `cloud`, `cloud-download` |
+| Деньги | 💰 | `currency-dollar`, `credit-card` |
+| Слои | 📚 | `stack-3`, `layers-2` |
+| Книги | 📖 | `book`, `book-2` |
+
+### 🎨 Кастомизация иконок
+
+```html
+<!-- Стандартная иконка 24x24 -->
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+<!-- Увеличенная иконка 32x32 -->
+<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+<!-- С дополнительными классами -->
+<svg class="icon icon--large" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+  <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+```
+
+### 🔧 CSS стилизация иконок
+
+```css
+/* Базовые стили для иконок */
+.icon {
+  display: inline-block;
+  color: currentColor;
+  transition: color 0.2s ease;
+}
+
+/* Размеры */
+.icon--sm { width: 16px; height: 16px; }
+.icon--md { width: 24px; height: 24px; }
+.icon--lg { width: 32px; height: 32px; }
+.icon--xl { width: 48px; height: 48px; }
+
+/* Цвета */
+.icon--primary { color: var(--color-primary); }
+.icon--success { color: var(--color-success); }
+.icon--warning { color: var(--color-warning); }
+.icon--danger { color: var(--color-danger); }
+
+/* Hover эффекты */
+.icon-hover {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.icon-hover:hover {
+  transform: scale(1.1);
+}
+```
+
+### 🚨 Исправленные проблемы
+
+В ходе аудита были исправлены следующие поврежденные иконки:
+
+1. **layers** → **stack-3** (строка 1268) - Исправлен некорректный SVG путь
+2. **credit-card** (строка 213) - Обновлен на правильную иконку из Tabler
+3. **cloud** (строка 253) - Добавлены недостающие элементы пути
+4. **user-heart** (строка 450) - Исправлены координаты в path
+
+### ⚠️ Troubleshooting
+
+**Проблема**: Иконка отображается некорректно
+- Проверьте правильность SVG path
+- Убедитесь что viewBox="0 0 24 24"
+- Проверьте наличие всех обязательных атрибутов
+
+**Проблема**: Иконка не найдена
+- Используйте Icon Finder для поиска правильного названия
+- Проверьте доступность через CDN
+- Рассмотрите альтернативные названия
+
+**Проблема**: Иконка слишком мелкая/крупная  
+- Измените width и height (сохраняя пропорции)
+- Используйте CSS для масштабирования
+- Не изменяйте viewBox (всегда "0 0 24 24")
+
 ## Bento Grid Patterns
 
 ### Pattern 1: Asymmetric 3x3

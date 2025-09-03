@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabler Icons Finder - Поиск иконок</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background: #f8fafc;
+      color: #334155;
+      line-height: 1.6;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 12px;
+      padding: 24px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+    
+    .header {
+      text-align: center;
+      margin-bottom: 32px;
+      padding-bottom: 24px;
+      border-bottom: 2px solid #e2e8f0;
+    }
+    
+    .header h1 {
+      margin: 0 0 8px 0;
+      color: #4f46e5;
+      font-size: 2.25rem;
+      font-weight: 700;
+    }
+    
+    .header p {
+      margin: 0;
+      color: #64748b;
+      font-size: 1.1rem;
+    }
+    
+    .search-section {
+      margin-bottom: 32px;
+    }
+    
+    .search-input {
+      width: 100%;
+      padding: 12px 16px;
+      font-size: 16px;
+      border: 2px solid #e2e8f0;
+      border-radius: 8px;
+      transition: border-color 0.2s;
+    }
+    
+    .search-input:focus {
+      outline: none;
+      border-color: #4f46e5;
+    }
+    
+    .suggestions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 12px;
+    }
+    
+    .suggestion-tag {
+      padding: 4px 8px;
+      background: #f1f5f9;
+      border: 1px solid #e2e8f0;
+      border-radius: 4px;
+      font-size: 12px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    
+    .suggestion-tag:hover {
+      background: #e2e8f0;
+    }
+    
+    .results-section {
+      margin-bottom: 32px;
+    }
+    
+    .icon-result {
+      background: #f8fafc;
+      border: 2px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 24px;
+      margin-bottom: 16px;
+      transition: border-color 0.2s;
+    }
+    
+    .icon-result:hover {
+      border-color: #4f46e5;
+    }
+    
+    .icon-preview {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+    
+    .icon-display {
+      width: 48px;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: white;
+      border: 1px solid #e2e8f0;
+      border-radius: 6px;
+    }
+    
+    .icon-info h3 {
+      margin: 0 0 4px 0;
+      color: #1e293b;
+      font-size: 1.1rem;
+    }
+    
+    .icon-info p {
+      margin: 0;
+      color: #64748b;
+      font-size: 0.9rem;
+    }
+    
+    .code-section {
+      background: #1e293b;
+      color: #e2e8f0;
+      padding: 16px;
+      border-radius: 6px;
+      font-family: 'Monaco', 'Menlo', monospace;
+      font-size: 13px;
+      line-height: 1.4;
+      position: relative;
+      margin-bottom: 12px;
+    }
+    
+    .copy-btn {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      background: #4f46e5;
+      color: white;
+      border: none;
+      padding: 6px 12px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 12px;
+      transition: background-color 0.2s;
+    }
+    
+    .copy-btn:hover {
+      background: #4338ca;
+    }
+    
+    .copy-btn.copied {
+      background: #059669;
+    }
+    
+    .tabs {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+    
+    .tab {
+      padding: 6px 12px;
+      background: #e2e8f0;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 12px;
+      transition: background-color 0.2s;
+    }
+    
+    .tab.active {
+      background: #4f46e5;
+      color: white;
+    }
+    
+    .error {
+      background: #fef2f2;
+      color: #b91c1c;
+      padding: 12px;
+      border-radius: 6px;
+      margin: 12px 0;
+      border: 1px solid #fecaca;
+    }
+    
+    .loading {
+      text-align: center;
+      padding: 32px;
+      color: #64748b;
+    }
+    
+    .loading::after {
+      content: '';
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      border: 2px solid #e2e8f0;
+      border-radius: 50%;
+      border-top-color: #4f46e5;
+      animation: spin 1s linear infinite;
+      margin-left: 8px;
+    }
+    
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+    
+    .footer {
+      text-align: center;
+      margin-top: 48px;
+      padding-top: 24px;
+      border-top: 1px solid #e2e8f0;
+      color: #64748b;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Tabler Icons Finder</h1>
+      <p>Поиск и копирование SVG иконок из библиотеки Tabler Icons</p>
+    </div>
+
+    <div class="search-section">
+      <input 
+        type="text" 
+        class="search-input" 
+        placeholder="Введите название иконки (например: user, star, play, settings...)"
+        id="iconSearch"
+      >
+      <div class="suggestions" id="suggestions"></div>
+    </div>
+
+    <div class="results-section" id="results"></div>
+
+    <div class="footer">
+      <p>
+        Использует библиотеку <strong>Tabler Icons</strong> • 
+        <a href="https://tabler.io/icons" target="_blank">tabler.io/icons</a>
+      </p>
+    </div>
+  </div>
+
+  <script src="tabler-icons-helper.js"></script>
+  <script>
+    class IconFinder {
+      constructor() {
+        this.searchInput = document.getElementById('iconSearch');
+        this.resultsContainer = document.getElementById('results');
+        this.suggestionsContainer = document.getElementById('suggestions');
+        this.tabler = new TablerIconsHelper();
+        
+        this.initEvents();
+        this.showPopularIcons();
+      }
+      
+      initEvents() {
+        let searchTimeout;
+        this.searchInput.addEventListener('input', (e) => {
+          clearTimeout(searchTimeout);
+          searchTimeout = setTimeout(() => {
+            this.search(e.target.value.trim());
+          }, 300);
+        });
+        
+        this.searchInput.addEventListener('keypress', (e) => {
+          if (e.key === 'Enter') {
+            this.search(e.target.value.trim());
+          }
+        });
+      }
+      
+      async search(query) {
+        if (!query) {
+          this.showPopularIcons();
+          return;
+        }
+        
+        this.showLoading();
+        this.updateSuggestions(query);
+        
+        try {
+          const suggestions = this.tabler.suggestIcons(query);
+          const results = [];
+          
+          for (const iconName of suggestions) {
+            try {
+              const isAvailable = await this.tabler.isIconAvailable(iconName);
+              if (isAvailable) {
+                const svgCode = await this.tabler.getIcon(iconName);
+                results.push({ name: iconName, svg: svgCode });
+              }
+            } catch (error) {
+              console.warn(`Ошибка загрузки иконки ${iconName}:`, error);
+            }
+            
+            // Показываем первые результаты сразу
+            if (results.length > 0 && results.length % 3 === 0) {
+              this.displayResults(results, query);
+            }
+          }
+          
+          if (results.length === 0) {
+            // Пробуем поиск по точному имени
+            try {
+              const exactSvg = await this.tabler.getIcon(query);
+              results.push({ name: query, svg: exactSvg });
+            } catch (error) {
+              this.showError(`Иконка "${query}" не найдена. Попробуйте другое название.`);
+              return;
+            }
+          }
+          
+          this.displayResults(results, query);
+          
+        } catch (error) {
+          this.showError('Ошибка при поиске иконок');
+          console.error('Search error:', error);
+        }
+      }
+      
+      updateSuggestions(query) {
+        const suggestions = this.tabler.suggestIcons(query);
+        this.suggestionsContainer.innerHTML = suggestions
+          .slice(0, 8)
+          .map(name => `<span class="suggestion-tag" onclick="iconFinder.searchExact('${name}')">${name}</span>`)
+          .join('');
+      }
+      
+      searchExact(iconName) {
+        this.searchInput.value = iconName;
+        this.search(iconName);
+      }
+      
+      displayResults(results, query) {
+        const html = results.map(result => this.createIconCard(result)).join('');
+        this.resultsContainer.innerHTML = html;
+      }
+      
+      createIconCard({ name, svg }) {
+        const paths = this.extractPaths(svg);
+        const htmlCode = this.formatForHtml(svg);
+        const reactCode = this.formatForReact(paths, name);
+        
+        return `
+          <div class="icon-result">
+            <div class="icon-preview">
+              <div class="icon-display">
+                ${svg}
+              </div>
+              <div class="icon-info">
+                <h3>${name}</h3>
+                <p>Tabler Icons • Готово к использованию</p>
+              </div>
+            </div>
+            
+            <div class="tabs">
+              <button class="tab active" onclick="this.parentNode.nextElementSibling.children[0].style.display='block';this.parentNode.nextElementSibling.children[1].style.display='none';this.parentNode.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));this.classList.add('active')">HTML</button>
+              <button class="tab" onclick="this.parentNode.nextElementSibling.children[1].style.display='block';this.parentNode.nextElementSibling.children[0].style.display='none';this.parentNode.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));this.classList.add('active')">Paths Only</button>
+            </div>
+            
+            <div>
+              <div class="code-section">
+                <button class="copy-btn" onclick="this.copyCode('${btoa(htmlCode)}')">Копировать</button>
+                <pre>${this.escapeHtml(htmlCode)}</pre>
+              </div>
+              
+              <div class="code-section" style="display:none">
+                <button class="copy-btn" onclick="this.copyCode('${btoa(reactCode)}')">Копировать</button>
+                <pre>${this.escapeHtml(reactCode)}</pre>
+              </div>
+            </div>
+          </div>
+        `;
+      }
+      
+      extractPaths(svg) {
+        const pathMatches = svg.match(/<path[^>]*>/g);
+        return pathMatches ? pathMatches.join('\n  ') : '';
+      }
+      
+      formatForHtml(svg) {
+        return svg
+          .replace(/class="[^"]*"/g, '')
+          .replace(/>\s+</g, '>\n<')
+          .replace(/^<svg/, '<svg aria-hidden="true"');
+      }
+      
+      formatForReact(paths, iconName) {
+        return `<!-- Только path элементы для встраивания в существующий <svg> -->
+${paths}`;
+      }
+      
+      escapeHtml(text) {
+        const div = document.createElement('div');
+        div.textContent = text;
+        return div.innerHTML;
+      }
+      
+      showLoading() {
+        this.resultsContainer.innerHTML = '<div class="loading">Поиск иконок...</div>';
+      }
+      
+      showError(message) {
+        this.resultsContainer.innerHTML = `<div class="error">${message}</div>`;
+      }
+      
+      async showPopularIcons() {
+        const popularIcons = ['user', 'star', 'heart', 'play', 'settings', 'home', 'search', 'check'];
+        this.showLoading();
+        
+        const results = [];
+        for (const iconName of popularIcons) {
+          try {
+            const svg = await this.tabler.getIcon(iconName);
+            results.push({ name: iconName, svg });
+          } catch (error) {
+            console.warn(`Не удалось загрузить популярную иконку ${iconName}`);
+          }
+        }
+        
+        this.displayResults(results, 'популярные');
+      }
+    }
+    
+    // Добавляем метод копирования в прототип HTMLButtonElement
+    HTMLButtonElement.prototype.copyCode = function(base64Code) {
+      const code = atob(base64Code);
+      navigator.clipboard.writeText(code).then(() => {
+        const originalText = this.textContent;
+        this.textContent = 'Скопировано!';
+        this.classList.add('copied');
+        setTimeout(() => {
+          this.textContent = originalText;
+          this.classList.remove('copied');
+        }, 2000);
+      }).catch(err => {
+        console.error('Ошибка копирования: ', err);
+        alert('Не удалось скопировать код. Попробуйте выделить текст вручную.');
+      });
+    };
+    
+    // Инициализация
+    let iconFinder;
+    document.addEventListener('DOMContentLoaded', () => {
+      iconFinder = new IconFinder();
+    });
+  </script>
+</body>
+</html>
