@@ -301,6 +301,7 @@
 .learning-conclusion-text .overline {
   display: block;
   margin-bottom: 16px;
+  font-size: 18px; /* Увеличенный размер для лучшей видимости */
 }
 
 .learning-conclusion-text h3 {
@@ -669,6 +670,18 @@
     font-size: 16px;
     margin: 12px 0 32px 0;
   }
+}
+
+/* Font size overrides for specific blocks - revert to original values */
+
+/* Learning conclusion block - revert hero-title font size */
+.bento-item--learning-conclusion .hero-title {
+  font-size: var(--fs-h1); /* H1 размер: clamp(28px, 4vw, 42px) */
+}
+
+/* FAQ accordion titles - revert font size */
+.accordion__title {
+  font-size: initial; /* Remove the 18px override, use default */
 }
 
 
