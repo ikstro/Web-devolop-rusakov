@@ -11,6 +11,30 @@
   .hero__grid { gap: 16px; }
   .hero-discount-form { margin-top: 8px; }
   .countdown-timer { margin-bottom: 8px; }
+  
+  /* Author section mobile fixes */
+  .card--author .about-card__content {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+    text-align: center;
+  }
+  
+  .card--author .about-card__image {
+    order: -1;
+  }
+  
+  .card--author .about-cards-grid {
+    gap: 16px;
+  }
+  
+  /* Mobile spacing for reviews section */
+  .card--author .reviews-links .card h4 {
+    margin-bottom: 16px;
+  }
+  
+  .card--author .reviews-links .btn {
+    margin-top: 16px;
+  }
 }
 
 

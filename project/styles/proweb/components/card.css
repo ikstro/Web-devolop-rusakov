@@ -73,10 +73,11 @@
 
 /* Author Cards - специальный стиль для секции "Об авторе" */
 .card--author {
-  background: #F8FAFF;
+  background: #fff;
+  border-radius: 20px;
   padding: 32px;
-  box-shadow: none;
-  border: none;
+  box-shadow: 0 4px 16px rgba(79, 70, 229, 0.04);
+  border: 1px solid rgba(79,70,229,.08);
   transition: none;
 }
 
@@ -131,24 +132,15 @@
 
 /* Author card header */
 .card--author .about-card__header {
-  display: flex;
-  align-items: center;
-  gap: 16px;
   margin-bottom: 20px;
 }
 
-.card--author .about-card__number {
-  font-size: 36px;
-  font-weight: 700;
-  color: var(--violet-500);
-  opacity: 0.8;
-}
 
 .card--author .about-card__title {
   font-size: 20px;
   font-weight: 600;
   color: var(--gray-800);
-  margin: 0;
+  margin: 12px 0 0 0;
 }
 
 /* Author card image */
@@ -206,7 +198,7 @@
   font-size: 20px;
   font-weight: 600;
   color: var(--gray-800);
-  margin-bottom: 24px;
+  margin-bottom: 32px;
   text-align: center;
 }
 
@@ -270,11 +262,12 @@
 }
 
 .card--author .reviews-note {
-  font-size: 12px;
+  font-size: 11px;
   color: var(--gray-400);
   font-style: italic;
   text-align: center;
-  margin-top: 16px;
+  margin: 8px 0 16px 0;
+  line-height: 1.4;
 }
 
 .card--bonus .badge { background: rgba(79,70,229,.1); color: var(--indigo-500); }
