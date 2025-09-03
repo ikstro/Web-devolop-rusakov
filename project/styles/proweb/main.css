@@ -1,4 +1,5 @@
 @import url("./components/buttons.css");
+@import url("./components/forms.css");
 @import url("./components/card.css");
 @import url("./components/bento-grid.css");
 @import url("./components/accordion.css");
@@ -13,6 +14,7 @@
   /* Colors */
   --indigo-500: #4f46e5;
   --violet-500: #7c3aed;
+  --violet-200: rgba(124, 58, 237, 0.15);
   --orange-500: #f97316;
   --green-500: #10b981;
   --green-600: #059669;
@@ -22,6 +24,7 @@
   --gray-600: #4b5563;
   --gray-500: #6b7280;
   --gray-400: #9ca3af;
+  --gray-300: #d1d5db;
   --gray-100: #f3f4f6;
   --bg: #ffffff;
   --bg-alt: #f8faff;
@@ -237,11 +240,8 @@ h3, .h3 { font-size: var(--fs-h2); font-weight: 600; margin: 0 0 var(--space-8);
 /* Forms */
 .hero-form { background: #fff; border-radius: 20px; padding: 32px; box-shadow: 0 12px 40px rgba(0,0,0,.08); border: 1px solid rgba(79,70,229,.1); }
 .form-title { font-size: 18px; font-weight: 600; color: var(--gray-800); text-align: center; margin-bottom: 16px; }
-.form-fields { display: flex; flex-direction: column; gap: 16px; margin-bottom: 20px; }
-.form-input { padding: 16px; border: 2px solid #e5e7eb; border-radius: 12px; font-size: 16px; color: var(--gray-700); background: #f9fafb; transition: .2s ease; }
-.form-input:focus { outline: none; border-color: var(--indigo-500); background: #fff; box-shadow: 0 0 0 3px rgba(79,70,229,.1); }
 .form-submit { width: 100%; padding: 16px; border-radius: 12px; border: 0; background: linear-gradient(135deg, var(--green-500), var(--green-600)); color: #fff; font-weight: 600; box-shadow: 0 4px 12px rgba(16,185,129,.3); cursor: pointer; transition: .2s ease; }
-.form-submit:hover { transform: translateY(-1px); box-shadow: 0 6px 16px rgba(16,185,129,.4); }
+.form-submit:hover { box-shadow: 0 6px 16px rgba(16,185,129,.4); }
 
 /* Hero Discount Form */
 .hero-discount-form {
@@ -281,43 +281,6 @@ h3, .h3 { font-size: var(--fs-h2); font-weight: 600; margin: 0 0 var(--space-8);
   grid-template-columns: 1fr 1fr auto;
   gap: 16px;
   align-items: end;
-}
-.form-fields-horizontal .form-input {
-  background: var(--bg-alt);
-  border: 2px solid #e5e7eb;
-  color: var(--gray-800);
-  font-size: 16px;
-  padding: 16px 20px;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-  transition: all 0.2s ease;
-}
-.form-fields-horizontal .form-input:focus {
-  border-color: var(--violet-500);
-  background: #fff;
-  box-shadow: 0 0 0 3px rgba(124,58,237,0.1);
-  outline: none;
-}
-.form-fields-horizontal .form-input::placeholder {
-  color: var(--gray-500);
-}
-.form-submit-purple {
-  padding: 16px 32px;
-  border-radius: 12px;
-  border: 0;
-  background: linear-gradient(135deg, var(--violet-500), #8b5cf6);
-  color: #fff;
-  font-weight: 600;
-  font-size: 16px;
-  box-shadow: 0 6px 20px rgba(124,58,237,0.3);
-  cursor: pointer;
-  transition: all 0.3s ease;
-  white-space: nowrap;
-  min-width: 180px;
-}
-.form-submit-purple:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 8px 24px rgba(124,58,237,0.4);
 }
 
 /* About Author Section */
@@ -475,10 +438,6 @@ body[data-variant="subscribe"] .block--order { display: none !important; }
   .form-fields-horizontal {
     grid-template-columns: 1fr;
     gap: 16px;
-  }
-  .form-submit-purple {
-    min-width: auto;
-    width: 100%;
   }
 }
 
