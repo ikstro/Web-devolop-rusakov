@@ -1032,11 +1032,11 @@ body[data-variant="subscribe"] .block--order { display: none !important; }
 }
 .summary-item + .summary-item { border-left: 1px solid rgba(17,24,39,0.06); }
 .summary-item:nth-child(n+4) { border-top: 1px solid rgba(17,24,39,0.06); }
-.summary-item .icon {
-  width: 28px; height: 28px;
+.summary-item .review-icon {
+  width: 48px; height: 48px;
   color: var(--indigo-500);
   background: rgba(79,70,229,.08);
-  border-radius: 8px;
+  border-radius: 12px;
   display: inline-flex; align-items: center; justify-content: center;
   margin-bottom: 14px;
 }
