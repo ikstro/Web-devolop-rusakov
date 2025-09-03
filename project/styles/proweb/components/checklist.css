@@ -85,7 +85,7 @@
 }
 
 .checklist--large .checklist__icon::before {
-  font-size: 14px;
+  font-size: var(--fs-body-sm);
 }
 
 .checklist--large .checklist__text {

@@ -18,14 +18,14 @@
   text-align: left; 
   padding: 24px 28px; 
   font-weight: 600; 
-  color: var(--gray-800); 
+  color: var(--text-heading); 
   background: rgba(255, 255, 255, 0.95); 
   border: 0; 
   cursor: pointer; 
   display: flex; 
   align-items: center; 
   justify-content: space-between;
-  font-size: 18px;
+  font-size: var(--fs-body-lg);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   overflow: hidden;
@@ -33,11 +33,11 @@
 
 .accordion__title { 
   pointer-events: none;
-  font-family: var(--font-sans);
-  font-size: clamp(16px, 2.5vw, 18px);
+  font-family: inherit;
+  font-size: clamp(var(--fs-body), 2.5vw, var(--fs-body-lg));
   font-weight: 600;
   line-height: 1.4;
-  color: var(--gray-800);
+  color: var(--text-heading);
   flex: 1;
   margin-right: 16px;
   transition: color 0.3s ease;
@@ -124,7 +124,7 @@
   background: rgba(79,70,229,0.1);
   color: var(--indigo-500);
   border-radius: 12px;
-  font-size: 16px;
+  font-size: var(--fs-body);
   font-weight: 700;
   margin-right: 16px;
   flex-shrink: 0;
@@ -170,15 +170,15 @@
 
 .module-content .module-description { 
   margin-bottom: 24px; 
-  font-size: 16px; 
+  font-size: var(--fs-body); 
   line-height: 1.6; 
-  color: var(--gray-700); 
+  color: var(--text-caption); 
 }
 
 .module-content h4 { 
   margin-bottom: 16px; 
   font-weight: 600; 
-  color: var(--gray-800); 
+  color: var(--text-heading); 
 }
 
 .lessons-list { 
@@ -189,7 +189,7 @@
 .lessons-list li { 
   margin-bottom: 8px; 
   line-height: 1.5; 
-  color: var(--gray-700); 
+  color: var(--text-caption); 
 }
 
 .lessons-list li::marker { 
@@ -224,7 +224,7 @@
 }
 
 .bonus-number {
-  font-size: 14px;
+  font-size: var(--fs-body-sm);
   font-weight: 600;
   color: var(--indigo-500);
   text-transform: uppercase;
@@ -235,16 +235,16 @@
   font-family: var(--font-sans);
   font-size: var(--fs-h4);
   font-weight: 600;
-  color: var(--gray-800);
+  color: var(--text-heading);
   line-height: 1.3;
   margin: 0;
 }
 
 .bonus-description {
   font-family: var(--font-sans);
-  font-size: 16px;
+  font-size: var(--fs-body);
   line-height: 1.5;
-  color: var(--gray-600);
+  color: var(--text-body-secondary);
   margin: 0;
   font-weight: 400;
 }

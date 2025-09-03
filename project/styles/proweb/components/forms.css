@@ -5,8 +5,8 @@
   padding: 15px 16px;
   border: 1px solid var(--violet-200);
   border-radius: var(--radius-12);
-  font-size: 16px;
-  color: var(--gray-700);
+  font-size: var(--fs-body);
+  color: var(--text-caption);
   background: var(--bg-alt);
   transition: all 0.2s ease;
   font-family: inherit;
@@ -22,7 +22,7 @@
 }
 
 .form-input::placeholder {
-  color: var(--gray-500);
+  color: var(--text-placeholder);
 }
 
 .form-input:disabled {
@@ -59,7 +59,7 @@
   }
   
   .form-input {
-    font-size: 14px;
+    font-size: var(--fs-body-sm);
     padding: 13px 16px;
   }
   

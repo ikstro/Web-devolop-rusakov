@@ -10,7 +10,7 @@
   color: var(--indigo-500); 
   background: transparent; 
   border: 2px solid var(--indigo-500); 
-  font-size: 14px;
+  font-size: var(--fs-body-sm);
   padding: 10px 20px;
 }
 .btn[data-variant="secondary"]:hover, .btn--secondary:hover { 

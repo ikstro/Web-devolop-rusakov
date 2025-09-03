@@ -54,7 +54,7 @@
   align-items: center;
   justify-content: center;
   font-weight: 700;
-  font-size: 16px;
+  font-size: var(--fs-body);
   border: 2px solid rgba(79,70,229,0.15);
   box-shadow: 0 4px 12px rgba(79,70,229,0.08);
   z-index: 2;
@@ -115,7 +115,7 @@
   .timeline__number {
     width: 36px;
     height: 36px;
-    font-size: 14px;
+    font-size: var(--fs-body-sm);
     border-radius: 10px;
   }
   
