@@ -10,7 +10,10 @@
       "Bash(python:*)",
       "Bash(curl:*)",
       "Bash(grep:*)",
-      "Bash(start:*)"
+      "Bash(start:*)",
+      "mcp__context7__resolve-library-id",
+      "mcp__context7__get-library-docs",
+      "WebFetch(domain:tabler.io)"
     ],
     "deny": [],
     "ask": [],
