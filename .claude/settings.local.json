@@ -104,7 +104,11 @@
       "Read(/E:\\Cursor\\FL\\Web-devolop-rusakov\\project\\styles\\proweb\\components/**)",
       "Read(/E:\\Cursor\\FL\\Web-devolop-rusakov\\project\\styles\\proweb\\components/**)",
       "Read(/E:\\Cursor\\FL\\Web-devolop-rusakov\\project\\styles\\proweb\\components/**)",
-      "Read(/E:\\Cursor\\FL\\Web-devolop-rusakov\\project/**)"
+      "Read(/E:\\Cursor\\FL\\Web-devolop-rusakov\\project/**)",
+      "Bash(pandoc:*)",
+      "Read(/E:\\Cursor\\FL\\Web-devolop-rusakov/**)",
+      "Read(/E:\\Cursor\\FL\\Web-devolop-rusakov/**)",
+      "Read(/E:\\Cursor\\FL\\Web-devolop-rusakov/**)"
     ],
     "deny": [],
     "ask": [],

@@ -325,5 +325,13 @@
   }
 }
 
+/* Special bottom padding for long result text in Frontend 5.1 */
+#program .accordion__item:nth-child(7) .module-content {
+  padding-bottom: 36px;
+}
 
+/* Override center alignment for module results */
+.module-result {
+  text-align: left;
+}
 

@@ -75,6 +75,12 @@ body:not([data-variant]) .block--subscribe {
   height: 100%;
 }
 
+.course-collage {
+  width: 100%;
+  height: 100%;
+  align-self: flex-end;
+}
+
 .course-placeholder {
   flex: 1;
   display: flex;
