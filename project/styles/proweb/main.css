@@ -796,7 +796,7 @@ body[data-variant="subscribe"] .block--order { display: none !important; }
 .order-hero__grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 48px;
+  gap: 24px;
   grid-template-rows: auto auto;
 }
 
@@ -928,9 +928,6 @@ body[data-variant="subscribe"] .block--order { display: none !important; }
 .course-collage {
   width: 100%;
   height: 100%;
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: var(--shadow-md);
 }
 
 .collage-image {
@@ -942,6 +939,17 @@ body[data-variant="subscribe"] .block--order { display: none !important; }
 
 .course-cover {
   color: var(--indigo-500);
+}
+
+/* Author conclusion block spacing */
+.author-conclusion-block {
+  margin-top: 24px;
+}
+
+@media (min-width: 1024px) {
+  .author-conclusion-block {
+    margin-top: 40px;
+  }
 }
 
 .course-cover h3 {
@@ -961,7 +969,7 @@ body[data-variant="subscribe"] .block--order { display: none !important; }
 @media (min-width: 1024px) {
   .order-hero__grid {
     grid-template-columns: 1fr 1fr;
-    gap: 80px;
+    gap: 40px;
     align-items: start;
     grid-template-rows: auto;
   }
