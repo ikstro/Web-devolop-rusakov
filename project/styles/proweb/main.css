@@ -105,7 +105,7 @@
   /* Semantic Text Colors */
   --text-heading: var(--color-text-primary);     /* Заголовки - самый темный */
   --text-body: var(--color-text-primary);        /* Основной текст - темный */
-  --text-body-secondary: var(--color-text-secondary); /* Описания */
+  --text-body-secondary: var(--color-text-muted); /* Описания */
   --text-caption: var(--color-text-muted);       /* Подписи, лейблы */
   --text-placeholder: var(--color-text-light);   /* Плейсхолдеры */
   --text-disabled: var(--color-text-subtle);     /* Неактивные элементы */
@@ -764,6 +764,7 @@ body[data-variant="subscribe"] .block--order { display: none !important; }
 
 /* Pricing — two-column layout + banner */
 .pricing-content { display: grid; grid-template-columns: 1fr; gap: 24px; }
+.pricing-description p { line-height: 1.6; }
 .pricing-banner {
   background: linear-gradient(135deg, #f8faff 0%, #e5edff 100%);
   border: 2px solid rgba(79,70,229,.1);

@@ -21,6 +21,7 @@
 
 .card p {
   color: var(--text-body-secondary);
+  font-size: var(--fs-body-sm);
   line-height: 1.6;
   margin: 0;
 }
@@ -128,7 +129,7 @@
 
 .card--author .about-card__text p {
   margin-bottom: 16px;
-  color: var(--text-body);
+  color: var(--text-body-secondary);
 }
 
 .card--author .about-card__text strong {
@@ -136,9 +137,9 @@
   font-weight: 600;
 }
 
-/* Author section - body text should be dark */
+/* Author section - body text should be secondary */
 .about-author .card p {
-  color: var(--text-body);
+  color: var(--text-body-secondary);
 }
 
 .card--author .about-card__text a {
