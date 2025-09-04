@@ -33,6 +33,40 @@
 
 /* Card Modifiers - System of 3 Presets */
 
+/* Preset 1: White Card - чистая белая карточка */
+.card--white {
+  background: #fff;
+  color: var(--text-heading);
+}
+
+.card--white h3, 
+.card--white h4, 
+.card--white .h3, 
+.card--white .h4 {
+  color: var(--text-heading);
+}
+
+.card--white p {
+  color: var(--text-body-secondary);
+}
+
+.card--white strong {
+  color: var(--text-heading);
+}
+
+/* Override feature-main-content styles for white cards */
+.card--white .feature-main-content h3 {
+  color: var(--text-heading);
+}
+
+.card--white .feature-main-content p {
+  color: var(--text-body-secondary);
+}
+
+.card--white .feature-main-content strong {
+  color: var(--text-heading);
+}
+
 /* Preset 2: Highlight Card - белая карточка с легким градиентным фоном */
 .card--highlight {
   background: linear-gradient(135deg, rgba(79,70,229,.02), rgba(124,58,237,.02));
@@ -110,7 +144,7 @@
   display: grid;
   grid-template-columns: 2fr 1fr;
   gap: 40px;
-  align-items: start;
+  align-items: center;
 }
 
 .card--author .about-card__text .card {
@@ -172,11 +206,18 @@
   align-items: start;
 }
 
+/* Author photo container with video-block effect */
+.card--author .author-photo-container {
+  border-radius: 16px;
+  max-width: 330px;
+  width: 100%;
+}
+
 .card--author .author-photo {
   width: 100%;
-  max-width: 280px;
   height: auto;
   border-radius: 16px;
+  border: 8px solid #fff;
 }
 
 /* About stats */
@@ -300,10 +341,17 @@
 
 /* Learning section specific styles - cleaned up */
 
+/* Course cover container with video-block effect */
+.course-cover-container {
+  border-radius: var(--radius-24);
+  width: 100%;
+}
+
 .course-cover {
   width: 100%;
   height: auto;
-  border-radius: 12px;
+  border-radius: 16px;
+  border: 8px solid #fff;
 }
 
 /* Learning conclusion content */

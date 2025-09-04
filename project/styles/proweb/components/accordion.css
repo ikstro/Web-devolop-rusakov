@@ -9,8 +9,20 @@
   position: relative;
 }
 
+/* Специальные отступы для секций Программа курса и FAQ */
+#program .accordion__item,
+#faq .accordion__item {
+  margin-bottom: 8px;
+}
+
 .accordion__item + .accordion__item { 
   margin-top: 16px; 
+}
+
+/* Специальные отступы для соседних аккордеонов в программе курса и FAQ */
+#program .accordion__item + .accordion__item,
+#faq .accordion__item + .accordion__item {
+  margin-top: 8px;
 }
 
 .accordion__header { 
@@ -249,11 +261,12 @@
 }
 
 .bonus-number {
-  font-size: var(--fs-body-sm);
+  font-size: var(--fs-base);
   font-weight: 600;
   color: var(--indigo-500);
   text-transform: uppercase;
   letter-spacing: 0.08em;
+  display: inline-block;
 }
 
 .bonus-title {
