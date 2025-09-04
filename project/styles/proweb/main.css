@@ -978,46 +978,6 @@ body[data-variant="subscribe"] .block--order { display: none !important; }
   }
 }
 
-/* FAQ Section Specific Styles */
-#faq .accordion__header {
-  padding: 20px 24px;
-  font-size: var(--fs-body);
-}
-
-#faq .accordion__title {
-  font-size: clamp(15px, 2vw, 16px);
-  font-weight: 500;
-  line-height: 1.5;
-}
-
-#faq .accordion__panel {
-  padding: 0;
-}
-
-#faq .accordion__panel p {
-  padding: 16px 24px 20px 24px;
-  margin: 0;
-  font-size: var(--fs-sm);
-  line-height: 1.6;
-  color: var(--text-body-secondary);
-  background: rgba(79, 70, 229, 0.02);
-}
-
-@media (max-width: 768px) {
-  #faq .accordion__header {
-    padding: 18px 20px;
-    font-size: var(--fs-sm);
-  }
-  
-  #faq .accordion__title {
-    font-size: var(--fs-body-sm);
-  }
-  
-  #faq .accordion__panel p {
-    padding: 14px 20px 18px 20px;
-    font-size: var(--fs-body-sm);
-  }
-}
 
 
 
