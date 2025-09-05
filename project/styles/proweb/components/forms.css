@@ -2,9 +2,9 @@
 .form-input {
   display: inline-block;
   width: 100%;
-  padding: 15px 16px;
+  padding: var(--form-control-padding-y) 16px;
   border: 1px solid var(--violet-200);
-  border-radius: var(--radius-12);
+  border-radius: var(--form-control-border-radius);
   font-size: var(--fs-body);
   color: var(--text-caption);
   background: var(--bg-alt);
@@ -15,7 +15,7 @@
 
 .form-input:focus {
   outline: none;
-  padding: 14px 16px;
+  padding: var(--form-control-padding-y-focus) 16px;
   border: 2px solid var(--indigo-500);
   background: #fff;
   box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
@@ -60,10 +60,10 @@
   
   .form-input {
     font-size: var(--fs-body-sm);
-    padding: 13px 16px;
+    padding: var(--form-control-padding-y-mobile) 16px;
   }
   
   .form-input:focus {
-    padding: 12px 16px;
+    padding: var(--form-control-padding-y-mobile-focus) 16px;
   }
 }

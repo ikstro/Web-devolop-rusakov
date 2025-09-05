@@ -208,7 +208,7 @@
 
 /* Author photo container with video-block effect */
 .card--author .author-photo-container {
-  border-radius: 16px;
+  border-radius: 20px;
   max-width: 330px;
   width: 100%;
 }
@@ -216,7 +216,7 @@
 .card--author .author-photo {
   width: 100%;
   height: auto;
-  border-radius: 16px;
+  border-radius: 20px;
   border: 8px solid #fff;
 }
 
@@ -650,12 +650,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 64px;
-  height: 64px;
+  width: 48px;
+  height: 48px;
   margin: 0 0 20px 0;
   color: var(--indigo-500);
   background: rgba(79,70,229,0.1);
-  border-radius: 16px;
+  border-radius: 12px;
 }
 
 .audience-item h3 {
@@ -726,9 +726,9 @@
   }
   
   .audience-icon {
-    width: 56px;
-    height: 56px;
-    border-radius: 14px;
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
   }
   
   .audience-item h3 {

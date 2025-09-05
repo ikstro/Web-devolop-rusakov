@@ -93,7 +93,8 @@
 }
 
 .accordion__item[data-open="true"] .accordion__panel { 
-  max-height: 1000px;
+  max-height: none;
+  height: auto;
   opacity: 1;
   transform: translateY(0);
 }

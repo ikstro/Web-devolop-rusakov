@@ -1,0 +1,22 @@
+{
+  "name": "web-develop-rusakov",
+  "version": "1.0.0",
+  "description": "Russian web development course landing page built with vanilla HTML, CSS, and JavaScript",
+  "main": "project/index.html",
+  "scripts": {
+    "serve": "echo 'Open project/index.html in your browser or use a local server'",
+    "dev": "echo 'This is a vanilla HTML/CSS/JS project. Open project/index.html in your browser.'",
+    "validate": "echo 'Use W3C HTML validator to check project/index.html'"
+  },
+  "keywords": [
+    "web-development",
+    "landing-page",
+    "vanilla-js",
+    "html5",
+    "css3"
+  ],
+  "author": "Rusakov Web Development Course",
+  "license": "ISC",
+  "private": true,
+  "type": "module"
+}

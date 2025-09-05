@@ -108,7 +108,10 @@
       "Bash(pandoc:*)",
       "Read(/E:\\Cursor\\FL\\Web-devolop-rusakov/**)",
       "Read(/E:\\Cursor\\FL\\Web-devolop-rusakov/**)",
-      "Read(/E:\\Cursor\\FL\\Web-devolop-rusakov/**)"
+      "Read(/E:\\Cursor\\FL\\Web-devolop-rusakov/**)",
+      "Bash(npm:*)",
+      "Bash(node:*)",
+      "Read(//c/Users/creoo/**)"
     ],
     "deny": [],
     "ask": [],
