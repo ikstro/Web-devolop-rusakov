@@ -1056,6 +1056,120 @@ body[data-variant="subscribe"] .block--order { display: none !important; }
   }
 }
 
+/* Variant Switcher */
+.variant-switcher {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 32px;
+  padding: 16px 0;
+}
+
+.variant-switcher input[type="radio"] {
+  display: none;
+}
+
+.variant-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(79, 70, 229, 0.2);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.variant-dot::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--violet-500);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.variant-switcher input[type="radio"]:checked + .variant-dot {
+  background: var(--violet-500);
+}
+
+.variant-switcher input[type="radio"]:checked + .variant-dot::after {
+  opacity: 1;
+  background: white;
+}
+
+.variant-dot:hover {
+  background: rgba(79, 70, 229, 0.4);
+  transform: scale(1.1);
+}
+
+/* Variant Content Styles */
+.variant-discount,
+.variant-full-price {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.variant-full-price {
+  margin-top: 0;
+}
+
+/* Course List Styles */
+.course-list {
+  margin: 24px 0;
+}
+
+.course-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 16px;
+  padding: 12px 0;
+}
+
+.course-check {
+  color: var(--green-500);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.course-item span {
+  font-size: var(--fs-body);
+  line-height: 1.5;
+  color: var(--text-body);
+}
+
+/* Full Price Block */
+.full-price-block {
+  background: white;
+  border-radius: 20px;
+  padding: 32px;
+  margin-top: 24px;
+  text-align: center;
+  box-shadow: 0 8px 32px rgba(79, 70, 229, 0.08);
+  border: 1px solid rgba(79, 70, 229, 0.1);
+}
+
+.price-display {
+  margin-bottom: 24px;
+}
+
+.price-number {
+  display: block;
+  font-size: var(--fs-5xl);
+  font-weight: 700;
+  color: var(--violet-500);
+  margin-bottom: 4px;
+}
+
+.price-label {
+  font-size: var(--fs-body);
+  color: var(--text-body-secondary);
+}
+
 /* Mobile adjustments for order hero */
 @media (max-width: 768px) {
   .order-hero-section {
@@ -1063,12 +1177,25 @@ body[data-variant="subscribe"] .block--order { display: none !important; }
     min-height: auto;
   }
   
-  .conclusion-text, .pricing-box {
+  .conclusion-text, .pricing-box, .full-price-block {
     padding: 24px;
   }
   
   .course-image {
     padding: 24px;
+  }
+  
+  .variant-switcher {
+    margin-top: 24px;
+  }
+  
+  .course-item {
+    margin-bottom: 12px;
+    padding: 8px 0;
+  }
+  
+  .price-number {
+    font-size: var(--fs-4xl);
   }
 }
 
