@@ -517,9 +517,6 @@
     font-size: 40px;
   }
   
-  .feature-main-content {
-    padding: 24px;
-  }
   
   .feature-stats-content {
     padding: 24px 20px;
@@ -681,10 +678,19 @@
   
   .result-item {
     padding: 20px;
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  
+  .result-icon {
+    margin: 0;
+    flex-shrink: 0;
   }
   
   .result-item p {
     font-size: var(--fs-body-sm);
+    flex: 1;
   }
 
   .grid--how-works {

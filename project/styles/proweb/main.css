@@ -486,7 +486,6 @@ h3, .h3 { font-size: var(--fs-h2); font-weight: 600; margin: 0 0 var(--space-8);
 .action-button:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,.2); }
 .scroll-top-button { background: #f3f4f6; color: var(--text-disabled); }
 .scroll-top-button:hover { background: #e5e7eb; color: var(--text-caption); }
-.contact-button { background: var(--green-500); color: #fff; }
 .main-cta-button { background: linear-gradient(135deg, var(--indigo-500), var(--violet-500)); color: #fff; }
 
 .action-bar-mobile { left: 0; right: 0; bottom: 0; background: #fff; border-top: 1px solid #e5e7eb; padding: 16px 20px 20px; box-shadow: 0 -4px 16px rgba(0,0,0,.1); display: none; }
@@ -1051,7 +1050,7 @@ body[data-variant="subscribe"] .block--order { display: none !important; }
   .order-hero__grid {
     grid-template-columns: 1fr 1fr;
     gap: 40px;
-    align-items: start;
+    align-items: center;
     grid-template-rows: auto;
   }
 }
@@ -1131,7 +1130,7 @@ body[data-variant="subscribe"] .block--order { display: none !important; }
 }
 
 .course-check {
-  color: var(--green-500);
+  color: var(--violet-500);
   flex-shrink: 0;
   margin-top: 2px;
 }
@@ -1140,6 +1139,59 @@ body[data-variant="subscribe"] .block--order { display: none !important; }
   font-size: var(--fs-body);
   line-height: 1.5;
   color: var(--text-body);
+}
+
+/* Course Package Card - компактная карточка для списка курсов */
+.course-package-card {
+  background: rgba(79, 70, 229, 0.02);
+  border-radius: var(--radius-16);
+  border: 1px solid rgba(79, 70, 229, 0.08);
+  padding: 16px 24px;
+  margin: 24px 0;
+}
+
+.course-package-card h4 {
+  font-size: var(--fs-body-lg);
+  font-weight: 600;
+  color: var(--text-heading);
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.course-package-card .package-badge {
+  background: linear-gradient(135deg, var(--indigo-500), var(--violet-500));
+  color: white;
+  font-size: var(--fs-body-xs);
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: 6px;
+  letter-spacing: 0.025em;
+}
+
+.course-package-card .course-list {
+  margin: 0;
+}
+
+.course-package-card .course-item {
+  margin-bottom: 4px;
+  padding: 4px 0;
+}
+
+.course-package-card .course-item span {
+  font-size: var(--fs-body-sm);
+  line-height: 1.4;
+}
+
+.course-package-card .course-check {
+  width: 16px;
+  height: 16px;
+}
+
+.course-package-card .main-course {
+  font-weight: 600;
+  color: var(--text-heading);
 }
 
 /* Full Price Block */
