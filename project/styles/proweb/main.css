@@ -457,7 +457,15 @@ h3, .h3 { font-size: var(--fs-h2); font-weight: 600; margin: 0 0 var(--space-8);
   color: var(--text-body-secondary);
 }
 .footer__inner { display: flex; align-items: center; justify-content: space-between; padding: 24px 0; }
-.footer__brand { font-weight: 700; letter-spacing: .06em; color: var(--text-heading); }
+.footer__brand { 
+  display: flex;
+  align-items: center;
+}
+
+.footer__brand svg {
+  height: 28px;
+  width: auto;
+}
 .footer__copy { opacity: .9; font-size: var(--fs-body-sm); }
 .footer__link { 
   color: var(--indigo-500); 
