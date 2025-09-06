@@ -1,4 +1,4 @@
-.btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; border-radius: var(--form-control-border-radius); padding: var(--form-control-padding-y-btn) 22px; font-weight: 600; cursor: pointer; transition: .2s ease; border: 0; }
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; border-radius: var(--form-control-border-radius); padding: var(--form-control-padding-y-btn) 22px; font-family: var(--font-sans); font-weight: 600; cursor: pointer; transition: .2s ease; border: 0; }
 .btn--lg, .btn[data-size="lg"] { padding: 18px 32px; }
 
 /* Primary */

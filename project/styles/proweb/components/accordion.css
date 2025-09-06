@@ -93,8 +93,7 @@
 }
 
 .accordion__item[data-open="true"] .accordion__panel { 
-  max-height: none;
-  height: auto;
+  max-height: 1000px;
   opacity: 1;
   transform: translateY(0);
 }
@@ -197,10 +196,13 @@
 /* Простая анимация появления без staggered эффекта */
 .accordion__item {
   animation: accordionFadeIn 0.3s ease forwards;
-  opacity: 0;
+  opacity: 1;
 }
 
 @keyframes accordionFadeIn {
+  from {
+    opacity: 0;
+  }
   to {
     opacity: 1;
   }
@@ -306,23 +308,31 @@
 /* Mobile adjustments for bonus accordion */
 @media (max-width: 768px) {
   .accordion--bonus .accordion__header {
-    min-height: 120px;
+    min-height: auto;
     padding: 20px;
   }
   
   .bonus-header-content {
+    flex-direction: column;
     gap: 16px;
+    text-align: left;
+    align-items: flex-start;
   }
   
   .bonus-cover {
     width: 100px;
+    order: -1;
+    align-self: flex-start;
   }
   
+  .bonus-text {
+    text-align: left;
+  }
   
   .accordion--bonus .accordion__caret {
-    top: 50%;
-    transform: translateY(-50%);
+    top: 20px;
     right: 20px;
+    transform: none;
   }
 }
 

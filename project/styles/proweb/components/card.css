@@ -383,11 +383,7 @@
   width: 270px;
 }
 
-/* Increase side paddings for conclusion card */
-.bento-item--learning-conclusion {
-  padding-left: 48px;
-  padding-right: 48px;
-}
+/* Remove excessive paddings for mobile - base card padding is sufficient */
 
 /* Mobile adjustments for learning content */
 @media (max-width: 768px) {
@@ -401,6 +397,8 @@
     width: 225px;
     align-self: center;
   }
+  
+  /* No additional padding - base .card component already has 24px */
 }
 
 /* Features Section Styles */

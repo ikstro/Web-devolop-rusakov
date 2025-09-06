@@ -111,7 +111,8 @@
       "Read(/E:\\Cursor\\FL\\Web-devolop-rusakov/**)",
       "Bash(npm:*)",
       "Bash(node:*)",
-      "Read(//c/Users/creoo/**)"
+      "Read(//c/Users/creoo/**)",
+      "mcp__sequential-thinking__sequentialthinking"
     ],
     "deny": [],
     "ask": [],
