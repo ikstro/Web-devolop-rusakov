@@ -1868,7 +1868,13 @@
       <div class="mobile-action-grid">
         <div class="discount-badge">50% скидка</div>
         <div class="timer-widget" id="miniTimer">05:12:15</div>
-        <a href="#order" class="btn btn--primary">Оформить заказ</a>
+        <a href="#order" class="btn btn--primary">Заказать</a>
+        <button class="action-bar-close" aria-label="Закрыть">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 6L6 18" />
+            <path d="M6 6l12 12" />
+          </svg>
+        </button>
       </div>
     </div>
 
@@ -1895,6 +1901,18 @@
             }
           });
         });
+        
+        // Close action bar functionality
+        const actionBarClose = document.querySelector('.action-bar-close');
+        const actionBarMobile = document.querySelector('.action-bar-mobile');
+        
+        if (actionBarClose && actionBarMobile) {
+          actionBarClose.addEventListener('click', function() {
+            actionBarMobile.style.display = 'none';
+            // Optional: Save state to localStorage
+            localStorage.setItem('actionBarClosed', 'true');
+          });
+        }
         
         // Smooth scroll for all anchor links
         const anchorLinks = document.querySelectorAll('a[href^="#"]');
