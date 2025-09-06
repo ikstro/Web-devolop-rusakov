@@ -37,6 +37,7 @@
         <a class="mobile-menu__link" href="#bonuses">Бонусы</a>
         <a class="mobile-menu__link" href="#format">Формат обучения</a>
         <a class="mobile-menu__link" href="#faq">Вопросы и ответы</a>
+        <a class="btn btn--primary mobile-menu__cta" href="#order">Оформить заказ</a>
       </nav>
     </header>
 
@@ -1865,6 +1866,7 @@
     </div>
     <div class="action-bar action-bar-mobile" hidden>
       <div class="mobile-action-grid">
+        <div class="discount-badge">50% скидка</div>
         <div class="timer-widget" id="miniTimer">05:12:15</div>
         <a href="#order" class="btn btn--primary">Оформить заказ</a>
       </div>
@@ -1879,16 +1881,10 @@
         const burger = document.querySelector('.burger');
         const mobileMenu = document.querySelector('#mobileMenu');
         
-        // Burger toggle
-        if (burger && mobileMenu) {
-          burger.addEventListener('click', function() {
-            const isOpen = mobileMenu.classList.toggle('open');
-            burger.setAttribute('aria-expanded', String(isOpen));
-          });
-        }
+        // Burger toggle handled in js/proweb.min.js to avoid double toggling
         
         // Close mobile menu when clicking on anchor links
-        const mobileMenuLinks = document.querySelectorAll('.mobile-menu__link');
+        const mobileMenuLinks = document.querySelectorAll('.mobile-menu__link, .mobile-menu__cta');
         mobileMenuLinks.forEach(function(link) {
           link.addEventListener('click', function() {
             if (mobileMenu) {

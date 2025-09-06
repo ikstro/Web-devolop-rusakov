@@ -8,16 +8,7 @@
   :root { --header-h: 60px; }
   .logo img { height: 32px; }
   .header-cta { 
-    color: #fff; 
-    background: linear-gradient(135deg, var(--indigo-500), var(--violet-500)); 
-    border: 0; 
-    font-size: var(--fs-body-sm);
-    padding: 8px 16px;
-    border-radius: var(--radius-12);
-    box-shadow: var(--shadow-btn);
-  }
-  .header-cta:hover {
-    box-shadow: 0 8px 28px rgba(79,70,229,.4);
+    display: none;
   }
   .header__inner { 
     align-items: center; 
@@ -76,6 +67,13 @@
   
   /* Show mobile action bar only on mobile */
   .action-bar-mobile { display: block; }
+  
+  /* Mobile menu button styling */
+  .mobile-menu__cta {
+    margin-top: 16px;
+    width: 100%;
+    justify-self: stretch;
+  }
 }
 
 
