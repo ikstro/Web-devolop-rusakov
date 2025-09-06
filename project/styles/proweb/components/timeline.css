@@ -144,3 +144,31 @@
     border-radius: 8px;
   }
 }
+
+@media (max-width: 360px) {
+  .timeline {
+    padding: 0;
+  }
+  
+  .timeline__content {
+    padding: 12px;
+    margin-left: 16px;
+  }
+  
+  .timeline__number {
+    width: 28px;
+    height: 28px;
+    font-size: 11px;
+    border-radius: 6px;
+  }
+  
+  .timeline__title {
+    font-size: var(--fs-body);
+    margin-bottom: 8px;
+  }
+  
+  .timeline__text {
+    font-size: var(--fs-body-sm);
+    line-height: 1.4;
+  }
+}

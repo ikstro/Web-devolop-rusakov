@@ -579,13 +579,21 @@
   position: relative;
   text-align: left;
   padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
 }
 
 .how-works-title {
-  font-size: clamp(16px, 3vw, 18px);
+  font-size: var(--fs-body);
   font-weight: 600;
-  color: var(--color-text);
-  margin: 16px 0 8px 0;
+  color: var(--text-heading);
+  margin: 0 0 8px 0;
+}
+
+.how-works-content {
+  width: 100%;
 }
 
 .how-works-item p {
@@ -593,6 +601,11 @@
   line-height: 1.6;
   color: var(--text-caption);
   margin: 0;
+}
+
+.how-works-item .result-icon {
+  margin: 0 0 8px 0;
+  flex-shrink: 0;
 }
 
 /* Audience Section Styles */
@@ -700,6 +713,17 @@
   
   .how-works-item {
     padding: 20px;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  
+  .how-works-item .result-icon {
+    margin: 0;
+  }
+  
+  .how-works-content {
+    flex: 1;
   }
   
   .how-works-item p {

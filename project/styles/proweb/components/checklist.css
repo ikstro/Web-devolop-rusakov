@@ -179,3 +179,24 @@
     padding: 16px 0;
   }
 }
+
+@media (max-width: 360px) {
+  .checklist__item {
+    padding: 10px 0;
+    gap: 12px;
+  }
+  
+  .checklist--large .checklist__item {
+    padding: 14px 0;
+  }
+  
+  .checklist__icon {
+    width: 18px;
+    height: 18px;
+  }
+  
+  .checklist__text {
+    font-size: var(--fs-body-sm);
+    line-height: 1.4;
+  }
+}
